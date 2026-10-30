@@ -6,7 +6,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 The Go, TypeScript and Python SDKs share one version number (see Versioning in the README).
 
-## [5.0.0] - Unreleased
+## [5.0.1] - 2026-10-30
+
+Rebuilt from the OpenAPI spec published at
+https://coinmarketcap.com/api/documentation/openapi.json (spec version `3.0.3`,
+sha256 `3e72a1c4…17c9`).
+
+### Fixed
+
+- `cmc.CmcIndex.IndexCMC100Latest` and `cmc.CmcIndex.IndexCMC20Latest` no longer return a
+  `*DecodeError`. `LastUpdate` on `IndexLatestDTO` and `CMC20IndexLatestDTO` is a
+  `*time.Time` now; it was an `*openapi_types.Date`, which can't hold the timestamp the
+  API returns. This fixes the known issue in 5.0.0.
+
+### Changed
+
+- Doc comments follow the updated endpoint descriptions, for example which API plans
+  include each endpoint.
+
+## [5.0.0] - 2026-10-23
 
 First release of the Go SDK. It is generated from the OpenAPI spec published at
 https://coinmarketcap.com/api/documentation/openapi.json (spec version `3.0.3`,
@@ -14,6 +32,7 @@ sha256 `855b21bb…3e0b`), and starts at 5.0.0 to share its version with the Typ
 and Python SDKs.
 
 ### Added
+
 - `coinmarketcap.New` with API key authentication, the pro and keyless public
   environments, retries with backoff, per-attempt timeouts and typed errors.
 - 110 endpoint methods in 16 categories, for example `cmc.Cryptocurrency.QuotesLatest`,
@@ -23,6 +42,7 @@ and Python SDKs.
 - `cmc.Raw()`, the generated low-level client, for access to the HTTP response.
 
 ### Known issues
+
 - `cmc.CmcIndex.IndexCMC100Latest` and `cmc.CmcIndex.IndexCMC20Latest` return a
   `*DecodeError` along with the decoded response: the spec types `data.last_update` as
   a date, but the API returns a timestamp.

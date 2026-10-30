@@ -15,7 +15,6 @@ import (
 	"time"
 
 	"github.com/oapi-codegen/runtime"
-	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
 // Defines values for CMCAICoverageCoinObjectAvailableQuestionKeys.
@@ -3087,7 +3086,7 @@ type CMC20IndexLatestDTO struct {
 	Constituents *[]CMC20IndexDetailDTO `json:"constituents,omitempty"`
 
 	// LastUpdate Timestamp (ISO 8601) of the last time this record was updated.
-	LastUpdate *openapi_types.Date `json:"last_update,omitempty"`
+	LastUpdate *time.Time `json:"last_update,omitempty"`
 
 	// NextUpdate Timestamp (ISO 8601) of the next time this record will be updated.
 	NextUpdate *string `json:"next_update,omitempty"`
@@ -7758,7 +7757,7 @@ type IndexLatestDTO struct {
 	Constituents *[]IndexDetailDTO `json:"constituents,omitempty"`
 
 	// LastUpdate Timestamp (ISO 8601) of the last time this record was updated.
-	LastUpdate *openapi_types.Date `json:"last_update,omitempty"`
+	LastUpdate *time.Time `json:"last_update,omitempty"`
 
 	// NextUpdate Timestamp (ISO 8601) of the next time this record will be updated.
 	NextUpdate *string `json:"next_update,omitempty"`
@@ -13813,7 +13812,7 @@ type ClientInterface interface {
 	// Returns information about all coin categories available on CoinMarketCap. Includes a paginated list of cryptocurrency quotes and metadata from each category.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -13834,7 +13833,7 @@ type ClientInterface interface {
 	// Returns information about a single coin category available on CoinMarketCap. Includes a paginated list of the cryptocurrency quotes and metadata for the category.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -14261,7 +14260,13 @@ type ClientInterface interface {
 
 	// GetGainerLoserListWithBody Get top gainers and losers
 	//
-	// Get list of top gainer and loser tokens.
+	// Get list of top gainer and loser tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -14270,7 +14275,13 @@ type ClientInterface interface {
 
 	// GetGainerLoserList Get top gainers and losers
 	//
-	// Get list of top gainer and loser tokens.
+	// Get list of top gainer and loser tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -14281,6 +14292,14 @@ type ClientInterface interface {
 	//
 	// Get detailed information for holders count
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/count`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v1/dex/holders/count (the `GetHolderCount` operationId).
@@ -14289,6 +14308,14 @@ type ClientInterface interface {
 	// GetHolderDetailWithBody Get holder detail
 	//
 	// Get detailed information for holders detail
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -14301,6 +14328,14 @@ type ClientInterface interface {
 	//
 	// Get detailed information for holders detail
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Takes a body of the `application/json` content type.
@@ -14311,6 +14346,14 @@ type ClientInterface interface {
 	// GetHoldersWithBody Get holders list
 	//
 	// Get detailed information for holders list
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -14323,6 +14366,14 @@ type ClientInterface interface {
 	//
 	// Get detailed information for holders list
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Takes a body of the `application/json` content type.
@@ -14332,14 +14383,28 @@ type ClientInterface interface {
 
 	// GetHolderTagCount Get holder tag count
 	//
-	// Get detailed information for holders tag count.
+	// Get detailed information for holders tag count
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Corresponds with GET /v1/dex/holders/tag_count (the `GetHolderTagCount` operationId).
 	GetHolderTagCount(ctx context.Context, params *GetHolderTagCountParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetHoldTrendList Get holder trend list
 	//
-	// Get detailed information for holders trend list.
+	// Get detailed information for holders trend list
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Corresponds with GET /v1/dex/holders/trend/list (the `GetHoldTrendList` operationId).
 	GetHoldTrendList(ctx context.Context, params *GetHoldTrendListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -14348,6 +14413,14 @@ type ClientInterface interface {
 	//
 	// Get liquidity change history for a token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/liquidity-change/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v1/dex/liquidity-change/list (the `GetLiquidityChangeList` operationId).
@@ -14355,7 +14428,13 @@ type ClientInterface interface {
 
 	// GetMemeListWithBody Get meme tokens
 	//
-	// Get list of meme tokens.
+	// Get list of meme tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -14364,7 +14443,13 @@ type ClientInterface interface {
 
 	// GetMemeList Get meme tokens
 	//
-	// Get list of meme tokens.
+	// Get list of meme tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -14373,7 +14458,13 @@ type ClientInterface interface {
 
 	// GetNewListWithBody Get new tokens
 	//
-	// Get list of newly launched tokens.
+	// Get list of newly launched tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -14382,7 +14473,13 @@ type ClientInterface interface {
 
 	// GetNewList Get new tokens
 	//
-	// Get list of newly launched tokens.
+	// Get list of newly launched tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -14393,6 +14490,14 @@ type ClientInterface interface {
 	//
 	// Get detailed information for a specific platform
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/platform/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v1/dex/platform/detail (the `GetPlatformDetail` operationId).
@@ -14401,6 +14506,14 @@ type ClientInterface interface {
 	// GetPlatformList Get platform list
 	//
 	// Get list of all supported platforms
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/platform/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -14411,6 +14524,14 @@ type ClientInterface interface {
 	//
 	// Search for tokens by keyword
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/search`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v1/dex/search (the `Search` operationId).
@@ -14419,6 +14540,14 @@ type ClientInterface interface {
 	// GetSecurityDetail Get security detail
 	//
 	// Get security audit information for a token
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/security/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -14429,6 +14558,14 @@ type ClientInterface interface {
 	//
 	// Get detailed information for a specific token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v1/dex/token (the `GetToken` operationId).
@@ -14437,6 +14574,14 @@ type ClientInterface interface {
 	// QueryTokenLiquidity Query token liquidity
 	//
 	// Get liquidity information for a specific token
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token-liquidity/query`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -14447,6 +14592,14 @@ type ClientInterface interface {
 	//
 	// Get all pools for a specific token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token/pools`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v1/dex/token/pools (the `GetTokenPools` operationId).
@@ -14456,6 +14609,14 @@ type ClientInterface interface {
 	//
 	// Get current price for a specific token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token/price`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v1/dex/token/price (the `GetTokenPrice` operationId).
@@ -14463,7 +14624,14 @@ type ClientInterface interface {
 
 	// BatchGetTokenPriceWithBody Batch get token prices
 	//
-	// Get prices for multiple tokens in one request.
+	// Get prices for multiple tokens in one request
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -14472,7 +14640,14 @@ type ClientInterface interface {
 
 	// BatchGetTokenPrice Batch get token prices
 	//
-	// Get prices for multiple tokens in one request.
+	// Get prices for multiple tokens in one request
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -14481,7 +14656,14 @@ type ClientInterface interface {
 
 	// BatchQueryTokensWithBody Batch query tokens
 	//
-	// Query multiple tokens in one request.
+	// Query multiple tokens in one request
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -14490,7 +14672,14 @@ type ClientInterface interface {
 
 	// BatchQueryTokens Batch query tokens
 	//
-	// Query multiple tokens in one request.
+	// Query multiple tokens in one request
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -14501,6 +14690,14 @@ type ClientInterface interface {
 	//
 	// Get swap/trade history for a token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/tokens/transactions`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v1/dex/tokens/transactions (the `GetSwapList` operationId).
@@ -14508,7 +14705,13 @@ type ClientInterface interface {
 
 	// GetTrendingListWithBody Get trending tokens
 	//
-	// Get list of trending tokens.
+	// Get list of trending tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -14517,7 +14720,13 @@ type ClientInterface interface {
 
 	// GetTrendingList Get trending tokens
 	//
-	// Get list of trending tokens.
+	// Get list of trending tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -14537,7 +14746,7 @@ type ClientInterface interface {
 	//   The information and data are provided "as is" without warranty of any kind. CoinMarketCap shall have no responsibility or liability for these third parties’ information and data or have the duty to review, confirm, verify or otherwise perform any inquiry or investigation as to the completeness, accuracy, sufficiency, integrity, reliability or timeliness of any such information or data provided.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -14804,6 +15013,14 @@ type ClientInterface interface {
 	//
 	// Example: ``[[1.23, 1.45, 1.20, 1.40, 50000, 1705363200, 128], ...]``
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/k-line/candles`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v1/k-line/candles (the `GetKlineCandles` operationId).
@@ -14819,6 +15036,14 @@ type ClientInterface interface {
 	// - **[2]** timestamp: UNIX timestamp (seconds)
 	//
 	// Example: ``[[1.23, 50000, 1705363200], ...]``
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/k-line/points`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -14926,7 +15151,7 @@ type ClientInterface interface {
 	//
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -15550,6 +15775,14 @@ type ClientInterface interface {
 	//
 	// Returns the latest market quote for 1 or more spot pairs. Use the "convert" option to return market values in multiple fiat and cryptocurrency conversions in the same call.
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v4/dex/pairs/quotes/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Corresponds with GET /v4/dex/pairs/quotes/latest (the `GetLatestPairsQuotes` operationId).
@@ -15565,6 +15798,14 @@ type ClientInterface interface {
 	// GetSpotPairsLatest Pairs Listings Latest
 	//
 	// Returns a paginated list of all active dex spot pairs with latest market data. Use the "convert" option to return market values in multiple fiat and cryptocurrency conversions in the same call.
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v4/dex/spot-pairs/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -15668,7 +15909,7 @@ type ClientInterface interface {
 	// Returns all active derivative market pairs that CoinMarketCap tracks for a given cryptocurrency, across exchanges.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -15759,7 +16000,7 @@ type ClientInterface interface {
 	// Returns the list of derivatives exchanges CoinMarketCap tracks, sorted by 24-hour derivative volume in descending order by default. Only exchanges with active derivative trading (open interest or derivative volume > 0) are returned.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -15777,7 +16018,7 @@ type ClientInterface interface {
 	// Returns all active derivative market pairs that CoinMarketCap tracks for a given exchange.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -16217,7 +16458,7 @@ func (c *Client) GetV1CryptocurrencyAirdrops(ctx context.Context, params *GetV1C
 // Returns information about all coin categories available on CoinMarketCap. Includes a paginated list of cryptocurrency quotes and metadata from each category.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -16248,7 +16489,7 @@ func (c *Client) GetV1CryptocurrencyCategories(ctx context.Context, params *GetV
 // Returns information about a single coin category available on CoinMarketCap. Includes a paginated list of the cryptocurrency quotes and metadata for the category.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -16817,7 +17058,13 @@ func (c *Client) GetV1CryptocurrencyTrendingMostvisited(ctx context.Context, par
 
 // GetGainerLoserListWithBody Get top gainers and losers
 //
-// Get list of top gainer and loser tokens.
+// Get list of top gainer and loser tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type.
 //
@@ -16836,7 +17083,13 @@ func (c *Client) GetGainerLoserListWithBody(ctx context.Context, contentType str
 
 // GetGainerLoserList Get top gainers and losers
 //
-// Get list of top gainer and loser tokens.
+// Get list of top gainer and loser tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type.
 //
@@ -16855,7 +17108,15 @@ func (c *Client) GetGainerLoserList(ctx context.Context, body GetGainerLoserList
 
 // GetHolderCount Get holder count
 //
-// # Get detailed information for holders count
+// Get detailed information for holders count
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/count`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -16874,7 +17135,15 @@ func (c *Client) GetHolderCount(ctx context.Context, params *GetHolderCountParam
 
 // GetHolderDetailWithBody Get holder detail
 //
-// # Get detailed information for holders detail
+// Get detailed information for holders detail
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -16895,7 +17164,15 @@ func (c *Client) GetHolderDetailWithBody(ctx context.Context, contentType string
 
 // GetHolderDetail Get holder detail
 //
-// # Get detailed information for holders detail
+// Get detailed information for holders detail
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -16916,7 +17193,15 @@ func (c *Client) GetHolderDetail(ctx context.Context, body GetHolderDetailJSONRe
 
 // GetHoldersWithBody Get holders list
 //
-// # Get detailed information for holders list
+// Get detailed information for holders list
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -16937,7 +17222,15 @@ func (c *Client) GetHoldersWithBody(ctx context.Context, contentType string, bod
 
 // GetHolders Get holders list
 //
-// # Get detailed information for holders list
+// Get detailed information for holders list
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -16958,7 +17251,14 @@ func (c *Client) GetHolders(ctx context.Context, body GetHoldersJSONRequestBody,
 
 // GetHolderTagCount Get holder tag count
 //
-// Get detailed information for holders tag count.
+// Get detailed information for holders tag count
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Corresponds with GET /v1/dex/holders/tag_count (the `GetHolderTagCount` operationId).
 func (c *Client) GetHolderTagCount(ctx context.Context, params *GetHolderTagCountParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -16975,7 +17275,14 @@ func (c *Client) GetHolderTagCount(ctx context.Context, params *GetHolderTagCoun
 
 // GetHoldTrendList Get holder trend list
 //
-// Get detailed information for holders trend list.
+// Get detailed information for holders trend list
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Corresponds with GET /v1/dex/holders/trend/list (the `GetHoldTrendList` operationId).
 func (c *Client) GetHoldTrendList(ctx context.Context, params *GetHoldTrendListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -16992,7 +17299,15 @@ func (c *Client) GetHoldTrendList(ctx context.Context, params *GetHoldTrendListP
 
 // GetLiquidityChangeList Get liquidity change list
 //
-// # Get liquidity change history for a token
+// Get liquidity change history for a token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/liquidity-change/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17011,7 +17326,13 @@ func (c *Client) GetLiquidityChangeList(ctx context.Context, params *GetLiquidit
 
 // GetMemeListWithBody Get meme tokens
 //
-// Get list of meme tokens.
+// Get list of meme tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type.
 //
@@ -17030,7 +17351,13 @@ func (c *Client) GetMemeListWithBody(ctx context.Context, contentType string, bo
 
 // GetMemeList Get meme tokens
 //
-// Get list of meme tokens.
+// Get list of meme tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type.
 //
@@ -17049,7 +17376,13 @@ func (c *Client) GetMemeList(ctx context.Context, body GetMemeListJSONRequestBod
 
 // GetNewListWithBody Get new tokens
 //
-// Get list of newly launched tokens.
+// Get list of newly launched tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type.
 //
@@ -17068,7 +17401,13 @@ func (c *Client) GetNewListWithBody(ctx context.Context, contentType string, bod
 
 // GetNewList Get new tokens
 //
-// Get list of newly launched tokens.
+// Get list of newly launched tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type.
 //
@@ -17087,7 +17426,15 @@ func (c *Client) GetNewList(ctx context.Context, body GetNewListJSONRequestBody,
 
 // GetPlatformDetail Get platform detail
 //
-// # Get detailed information for a specific platform
+// Get detailed information for a specific platform
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/platform/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17106,7 +17453,15 @@ func (c *Client) GetPlatformDetail(ctx context.Context, params *GetPlatformDetai
 
 // GetPlatformList Get platform list
 //
-// # Get list of all supported platforms
+// Get list of all supported platforms
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/platform/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17125,7 +17480,15 @@ func (c *Client) GetPlatformList(ctx context.Context, reqEditors ...RequestEdito
 
 // Search Search tokens
 //
-// # Search for tokens by keyword
+// Search for tokens by keyword
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/search`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17144,7 +17507,15 @@ func (c *Client) Search(ctx context.Context, params *SearchParams, reqEditors ..
 
 // GetSecurityDetail Get security detail
 //
-// # Get security audit information for a token
+// Get security audit information for a token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/security/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17163,7 +17534,15 @@ func (c *Client) GetSecurityDetail(ctx context.Context, params *GetSecurityDetai
 
 // GetToken Get token detail
 //
-// # Get detailed information for a specific token
+// Get detailed information for a specific token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17182,7 +17561,15 @@ func (c *Client) GetToken(ctx context.Context, params *GetTokenParams, reqEditor
 
 // QueryTokenLiquidity Query token liquidity
 //
-// # Get liquidity information for a specific token
+// Get liquidity information for a specific token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token-liquidity/query`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17201,7 +17588,15 @@ func (c *Client) QueryTokenLiquidity(ctx context.Context, params *QueryTokenLiqu
 
 // GetTokenPools Get token pools
 //
-// # Get all pools for a specific token
+// Get all pools for a specific token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token/pools`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17220,7 +17615,15 @@ func (c *Client) GetTokenPools(ctx context.Context, params *GetTokenPoolsParams,
 
 // GetTokenPrice Get token price
 //
-// # Get current price for a specific token
+// Get current price for a specific token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token/price`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17239,7 +17642,14 @@ func (c *Client) GetTokenPrice(ctx context.Context, params *GetTokenPriceParams,
 
 // BatchGetTokenPriceWithBody Batch get token prices
 //
-// Get prices for multiple tokens in one request.
+// Get prices for multiple tokens in one request
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type.
 //
@@ -17258,7 +17668,14 @@ func (c *Client) BatchGetTokenPriceWithBody(ctx context.Context, contentType str
 
 // BatchGetTokenPrice Batch get token prices
 //
-// Get prices for multiple tokens in one request.
+// Get prices for multiple tokens in one request
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type.
 //
@@ -17277,7 +17694,14 @@ func (c *Client) BatchGetTokenPrice(ctx context.Context, body BatchGetTokenPrice
 
 // BatchQueryTokensWithBody Batch query tokens
 //
-// Query multiple tokens in one request.
+// Query multiple tokens in one request
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type.
 //
@@ -17296,7 +17720,14 @@ func (c *Client) BatchQueryTokensWithBody(ctx context.Context, contentType strin
 
 // BatchQueryTokens Batch query tokens
 //
-// Query multiple tokens in one request.
+// Query multiple tokens in one request
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type.
 //
@@ -17317,6 +17748,14 @@ func (c *Client) BatchQueryTokens(ctx context.Context, body BatchQueryTokensJSON
 //
 // Get swap/trade history for a token
 //
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
+//
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/tokens/transactions`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
 // Corresponds with GET /v1/dex/tokens/transactions (the `GetSwapList` operationId).
@@ -17334,7 +17773,13 @@ func (c *Client) GetSwapList(ctx context.Context, params *GetSwapListParams, req
 
 // GetTrendingListWithBody Get trending tokens
 //
-// Get list of trending tokens.
+// Get list of trending tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type.
 //
@@ -17353,7 +17798,13 @@ func (c *Client) GetTrendingListWithBody(ctx context.Context, contentType string
 
 // GetTrendingList Get trending tokens
 //
-// Get list of trending tokens.
+// Get list of trending tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type.
 //
@@ -17384,7 +17835,7 @@ func (c *Client) GetTrendingList(ctx context.Context, body GetTrendingListJSONRe
 //
 //     **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
 //
-//   - Free
+//   - Basic
 //
 //   - Builder
 //
@@ -17756,6 +18207,14 @@ func (c *Client) GetV1GlobalmetricsQuotesLatest(ctx context.Context, params *Get
 //
 // Example: “[[1.23, 1.45, 1.20, 1.40, 50000, 1705363200, 128], ...]“
 //
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
+//
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/k-line/candles`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
 // Corresponds with GET /v1/k-line/candles (the `GetKlineCandles` operationId).
@@ -17781,6 +18240,14 @@ func (c *Client) GetKlineCandles(ctx context.Context, params *GetKlineCandlesPar
 // - **[2]** timestamp: UNIX timestamp (seconds)
 //
 // Example: “[[1.23, 50000, 1705363200], ...]“
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/k-line/points`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -17933,7 +18400,7 @@ func (c *Client) GetV1SimplePrice(ctx context.Context, params *GetV1SimplePriceP
 // Convert APIs into postman format. You can reference the operation from [this article](https://coinmarketcap.com/alexandria/article/register-for-coinmarketcap-api).
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -18791,6 +19258,14 @@ func (c *Client) GetPairsLatestOHLCV(ctx context.Context, params *GetPairsLatest
 //
 // Returns the latest market quote for 1 or more spot pairs. Use the "convert" option to return market values in multiple fiat and cryptocurrency conversions in the same call.
 //
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
+//
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v4/dex/pairs/quotes/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
 // Corresponds with GET /v4/dex/pairs/quotes/latest (the `GetLatestPairsQuotes` operationId).
@@ -18826,6 +19301,14 @@ func (c *Client) GetPairsLatestTrade(ctx context.Context, params *GetPairsLatest
 // GetSpotPairsLatest Pairs Listings Latest
 //
 // Returns a paginated list of all active dex spot pairs with latest market data. Use the "convert" option to return market values in multiple fiat and cryptocurrency conversions in the same call.
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v4/dex/spot-pairs/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -18969,7 +19452,7 @@ func (c *Client) GetV5CmcAiLatest(ctx context.Context, params *GetV5CmcAiLatestP
 // Returns all active derivative market pairs that CoinMarketCap tracks for a given cryptocurrency, across exchanges.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -19100,7 +19583,7 @@ func (c *Client) GetV5DerivativesLiquidationsQuotesLatest(ctx context.Context, p
 // Returns the list of derivatives exchanges CoinMarketCap tracks, sorted by 24-hour derivative volume in descending order by default. Only exchanges with active derivative trading (open interest or derivative volume > 0) are returned.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -19128,7 +19611,7 @@ func (c *Client) GetV5ExchangeDerivativesList(ctx context.Context, params *GetV5
 // Returns all active derivative market pairs that CoinMarketCap tracks for a given exchange.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -31718,7 +32201,7 @@ type ClientWithResponsesInterface interface {
 	// Returns information about all coin categories available on CoinMarketCap. Includes a paginated list of cryptocurrency quotes and metadata from each category.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -31741,7 +32224,7 @@ type ClientWithResponsesInterface interface {
 	// Returns information about a single coin category available on CoinMarketCap. Includes a paginated list of the cryptocurrency quotes and metadata for the category.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -32200,7 +32683,13 @@ type ClientWithResponsesInterface interface {
 
 	// GetGainerLoserListWithBodyWithResponse Get top gainers and losers
 	//
-	// Get list of top gainer and loser tokens.
+	// Get list of top gainer and loser tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32209,7 +32698,13 @@ type ClientWithResponsesInterface interface {
 
 	// GetGainerLoserListWithResponse Get top gainers and losers
 	//
-	// Get list of top gainer and loser tokens.
+	// Get list of top gainer and loser tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32219,6 +32714,14 @@ type ClientWithResponsesInterface interface {
 	// GetHolderCountWithResponse Get holder count
 	//
 	// Get detailed information for holders count
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/count`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -32231,6 +32734,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Get detailed information for holders detail
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
@@ -32241,6 +32752,14 @@ type ClientWithResponsesInterface interface {
 	// GetHolderDetailWithResponse Get holder detail
 	//
 	// Get detailed information for holders detail
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -32253,6 +32772,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Get detailed information for holders list
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
@@ -32264,6 +32791,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Get detailed information for holders list
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
@@ -32273,7 +32808,14 @@ type ClientWithResponsesInterface interface {
 
 	// GetHolderTagCountWithResponse Get holder tag count
 	//
-	// Get detailed information for holders tag count.
+	// Get detailed information for holders tag count
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -32282,7 +32824,14 @@ type ClientWithResponsesInterface interface {
 
 	// GetHoldTrendListWithResponse Get holder trend list
 	//
-	// Get detailed information for holders trend list.
+	// Get detailed information for holders trend list
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -32293,6 +32842,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Get liquidity change history for a token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/liquidity-change/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -32302,7 +32859,13 @@ type ClientWithResponsesInterface interface {
 
 	// GetMemeListWithBodyWithResponse Get meme tokens
 	//
-	// Get list of meme tokens.
+	// Get list of meme tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32311,7 +32874,13 @@ type ClientWithResponsesInterface interface {
 
 	// GetMemeListWithResponse Get meme tokens
 	//
-	// Get list of meme tokens.
+	// Get list of meme tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32320,7 +32889,13 @@ type ClientWithResponsesInterface interface {
 
 	// GetNewListWithBodyWithResponse Get new tokens
 	//
-	// Get list of newly launched tokens.
+	// Get list of newly launched tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32329,7 +32904,13 @@ type ClientWithResponsesInterface interface {
 
 	// GetNewListWithResponse Get new tokens
 	//
-	// Get list of newly launched tokens.
+	// Get list of newly launched tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32339,6 +32920,14 @@ type ClientWithResponsesInterface interface {
 	// GetPlatformDetailWithResponse Get platform detail
 	//
 	// Get detailed information for a specific platform
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/platform/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -32351,6 +32940,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Get list of all supported platforms
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/platform/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -32361,6 +32958,14 @@ type ClientWithResponsesInterface interface {
 	// SearchWithResponse Search tokens
 	//
 	// Search for tokens by keyword
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/search`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -32373,6 +32978,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Get security audit information for a token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/security/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -32383,6 +32996,14 @@ type ClientWithResponsesInterface interface {
 	// GetTokenWithResponse Get token detail
 	//
 	// Get detailed information for a specific token
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -32395,6 +33016,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Get liquidity information for a specific token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token-liquidity/query`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -32405,6 +33034,14 @@ type ClientWithResponsesInterface interface {
 	// GetTokenPoolsWithResponse Get token pools
 	//
 	// Get all pools for a specific token
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token/pools`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -32417,6 +33054,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Get current price for a specific token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token/price`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -32426,7 +33071,14 @@ type ClientWithResponsesInterface interface {
 
 	// BatchGetTokenPriceWithBodyWithResponse Batch get token prices
 	//
-	// Get prices for multiple tokens in one request.
+	// Get prices for multiple tokens in one request
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32435,7 +33087,14 @@ type ClientWithResponsesInterface interface {
 
 	// BatchGetTokenPriceWithResponse Batch get token prices
 	//
-	// Get prices for multiple tokens in one request.
+	// Get prices for multiple tokens in one request
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32444,7 +33103,14 @@ type ClientWithResponsesInterface interface {
 
 	// BatchQueryTokensWithBodyWithResponse Batch query tokens
 	//
-	// Query multiple tokens in one request.
+	// Query multiple tokens in one request
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32453,7 +33119,14 @@ type ClientWithResponsesInterface interface {
 
 	// BatchQueryTokensWithResponse Batch query tokens
 	//
-	// Query multiple tokens in one request.
+	// Query multiple tokens in one request
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32464,6 +33137,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Get swap/trade history for a token
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/tokens/transactions`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -32473,7 +33154,13 @@ type ClientWithResponsesInterface interface {
 
 	// GetTrendingListWithBodyWithResponse Get trending tokens
 	//
-	// Get list of trending tokens.
+	// Get list of trending tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32482,7 +33169,13 @@ type ClientWithResponsesInterface interface {
 
 	// GetTrendingListWithResponse Get trending tokens
 	//
-	// Get list of trending tokens.
+	// Get list of trending tokens
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -32502,7 +33195,7 @@ type ClientWithResponsesInterface interface {
 	//   The information and data are provided "as is" without warranty of any kind. CoinMarketCap shall have no responsibility or liability for these third parties’ information and data or have the duty to review, confirm, verify or otherwise perform any inquiry or investigation as to the completeness, accuracy, sufficiency, integrity, reliability or timeliness of any such information or data provided.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -32789,6 +33482,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Example: ``[[1.23, 1.45, 1.20, 1.40, 50000, 1705363200, 128], ...]``
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/k-line/candles`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -32806,6 +33507,14 @@ type ClientWithResponsesInterface interface {
 	// - **[2]** timestamp: UNIX timestamp (seconds)
 	//
 	// Example: ``[[1.23, 50000, 1705363200], ...]``
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/k-line/points`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -32923,7 +33632,7 @@ type ClientWithResponsesInterface interface {
 	//
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -33599,6 +34308,14 @@ type ClientWithResponsesInterface interface {
 	//
 	// Returns the latest market quote for 1 or more spot pairs. Use the "convert" option to return market values in multiple fiat and cryptocurrency conversions in the same call.
 	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
+	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v4/dex/pairs/quotes/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -33618,6 +34335,14 @@ type ClientWithResponsesInterface interface {
 	// GetSpotPairsLatestWithResponse Pairs Listings Latest
 	//
 	// Returns a paginated list of all active dex spot pairs with latest market data. Use the "convert" option to return market values in multiple fiat and cryptocurrency conversions in the same call.
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic
+	//   - Builder
+	//   - Startup
+	//   - Growth
+	//   - Professional
+	//   - Enterprise
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v4/dex/spot-pairs/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
@@ -33729,7 +34454,7 @@ type ClientWithResponsesInterface interface {
 	// Returns all active derivative market pairs that CoinMarketCap tracks for a given cryptocurrency, across exchanges.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -33828,7 +34553,7 @@ type ClientWithResponsesInterface interface {
 	// Returns the list of derivatives exchanges CoinMarketCap tracks, sorted by 24-hour derivative volume in descending order by default. Only exchanges with active derivative trading (open interest or derivative volume > 0) are returned.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -33848,7 +34573,7 @@ type ClientWithResponsesInterface interface {
 	// Returns all active derivative market pairs that CoinMarketCap tracks for a given exchange.
 	//
 	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-	//   - Free
+	//   - Basic
 	//   - Builder
 	//   - Startup
 	//   - Growth
@@ -41487,7 +42212,7 @@ func (c *ClientWithResponses) GetV1CryptocurrencyAirdropsWithResponse(ctx contex
 // Returns information about all coin categories available on CoinMarketCap. Includes a paginated list of cryptocurrency quotes and metadata from each category.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -41516,7 +42241,7 @@ func (c *ClientWithResponses) GetV1CryptocurrencyCategoriesWithResponse(ctx cont
 // Returns information about a single coin category available on CoinMarketCap. Includes a paginated list of the cryptocurrency quotes and metadata for the category.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -42053,7 +42778,13 @@ func (c *ClientWithResponses) GetV1CryptocurrencyTrendingMostvisitedWithResponse
 
 // GetGainerLoserListWithBodyWithResponse Get top gainers and losers
 //
-// Get list of top gainer and loser tokens.
+// Get list of top gainer and loser tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42068,7 +42799,13 @@ func (c *ClientWithResponses) GetGainerLoserListWithBodyWithResponse(ctx context
 
 // GetGainerLoserListWithResponse Get top gainers and losers
 //
-// Get list of top gainer and loser tokens.
+// Get list of top gainer and loser tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42083,7 +42820,15 @@ func (c *ClientWithResponses) GetGainerLoserListWithResponse(ctx context.Context
 
 // GetHolderCountWithResponse Get holder count
 //
-// # Get detailed information for holders count
+// Get detailed information for holders count
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/count`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42100,7 +42845,15 @@ func (c *ClientWithResponses) GetHolderCountWithResponse(ctx context.Context, pa
 
 // GetHolderDetailWithBodyWithResponse Get holder detail
 //
-// # Get detailed information for holders detail
+// Get detailed information for holders detail
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42117,7 +42870,15 @@ func (c *ClientWithResponses) GetHolderDetailWithBodyWithResponse(ctx context.Co
 
 // GetHolderDetailWithResponse Get holder detail
 //
-// # Get detailed information for holders detail
+// Get detailed information for holders detail
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42134,7 +42895,15 @@ func (c *ClientWithResponses) GetHolderDetailWithResponse(ctx context.Context, b
 
 // GetHoldersWithBodyWithResponse Get holders list
 //
-// # Get detailed information for holders list
+// Get detailed information for holders list
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42151,7 +42920,15 @@ func (c *ClientWithResponses) GetHoldersWithBodyWithResponse(ctx context.Context
 
 // GetHoldersWithResponse Get holders list
 //
-// # Get detailed information for holders list
+// Get detailed information for holders list
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/holders/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42168,7 +42945,14 @@ func (c *ClientWithResponses) GetHoldersWithResponse(ctx context.Context, body G
 
 // GetHolderTagCountWithResponse Get holder tag count
 //
-// Get detailed information for holders tag count.
+// Get detailed information for holders tag count
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -42183,7 +42967,14 @@ func (c *ClientWithResponses) GetHolderTagCountWithResponse(ctx context.Context,
 
 // GetHoldTrendListWithResponse Get holder trend list
 //
-// Get detailed information for holders trend list.
+// Get detailed information for holders trend list
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -42198,7 +42989,15 @@ func (c *ClientWithResponses) GetHoldTrendListWithResponse(ctx context.Context, 
 
 // GetLiquidityChangeListWithResponse Get liquidity change list
 //
-// # Get liquidity change history for a token
+// Get liquidity change history for a token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/liquidity-change/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42215,7 +43014,13 @@ func (c *ClientWithResponses) GetLiquidityChangeListWithResponse(ctx context.Con
 
 // GetMemeListWithBodyWithResponse Get meme tokens
 //
-// Get list of meme tokens.
+// Get list of meme tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42230,7 +43035,13 @@ func (c *ClientWithResponses) GetMemeListWithBodyWithResponse(ctx context.Contex
 
 // GetMemeListWithResponse Get meme tokens
 //
-// Get list of meme tokens.
+// Get list of meme tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42245,7 +43056,13 @@ func (c *ClientWithResponses) GetMemeListWithResponse(ctx context.Context, body 
 
 // GetNewListWithBodyWithResponse Get new tokens
 //
-// Get list of newly launched tokens.
+// Get list of newly launched tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42260,7 +43077,13 @@ func (c *ClientWithResponses) GetNewListWithBodyWithResponse(ctx context.Context
 
 // GetNewListWithResponse Get new tokens
 //
-// Get list of newly launched tokens.
+// Get list of newly launched tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42275,7 +43098,15 @@ func (c *ClientWithResponses) GetNewListWithResponse(ctx context.Context, body G
 
 // GetPlatformDetailWithResponse Get platform detail
 //
-// # Get detailed information for a specific platform
+// Get detailed information for a specific platform
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/platform/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42292,7 +43123,15 @@ func (c *ClientWithResponses) GetPlatformDetailWithResponse(ctx context.Context,
 
 // GetPlatformListWithResponse Get platform list
 //
-// # Get list of all supported platforms
+// Get list of all supported platforms
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/platform/list`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42309,7 +43148,15 @@ func (c *ClientWithResponses) GetPlatformListWithResponse(ctx context.Context, r
 
 // SearchWithResponse Search tokens
 //
-// # Search for tokens by keyword
+// Search for tokens by keyword
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/search`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42326,7 +43173,15 @@ func (c *ClientWithResponses) SearchWithResponse(ctx context.Context, params *Se
 
 // GetSecurityDetailWithResponse Get security detail
 //
-// # Get security audit information for a token
+// Get security audit information for a token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/security/detail`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42343,7 +43198,15 @@ func (c *ClientWithResponses) GetSecurityDetailWithResponse(ctx context.Context,
 
 // GetTokenWithResponse Get token detail
 //
-// # Get detailed information for a specific token
+// Get detailed information for a specific token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42360,7 +43223,15 @@ func (c *ClientWithResponses) GetTokenWithResponse(ctx context.Context, params *
 
 // QueryTokenLiquidityWithResponse Query token liquidity
 //
-// # Get liquidity information for a specific token
+// Get liquidity information for a specific token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token-liquidity/query`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42377,7 +43248,15 @@ func (c *ClientWithResponses) QueryTokenLiquidityWithResponse(ctx context.Contex
 
 // GetTokenPoolsWithResponse Get token pools
 //
-// # Get all pools for a specific token
+// Get all pools for a specific token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token/pools`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42394,7 +43273,15 @@ func (c *ClientWithResponses) GetTokenPoolsWithResponse(ctx context.Context, par
 
 // GetTokenPriceWithResponse Get token price
 //
-// # Get current price for a specific token
+// Get current price for a specific token
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/token/price`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -42411,7 +43298,14 @@ func (c *ClientWithResponses) GetTokenPriceWithResponse(ctx context.Context, par
 
 // BatchGetTokenPriceWithBodyWithResponse Batch get token prices
 //
-// Get prices for multiple tokens in one request.
+// Get prices for multiple tokens in one request
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42426,7 +43320,14 @@ func (c *ClientWithResponses) BatchGetTokenPriceWithBodyWithResponse(ctx context
 
 // BatchGetTokenPriceWithResponse Batch get token prices
 //
-// Get prices for multiple tokens in one request.
+// Get prices for multiple tokens in one request
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42441,7 +43342,14 @@ func (c *ClientWithResponses) BatchGetTokenPriceWithResponse(ctx context.Context
 
 // BatchQueryTokensWithBodyWithResponse Batch query tokens
 //
-// Query multiple tokens in one request.
+// Query multiple tokens in one request
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42456,7 +43364,14 @@ func (c *ClientWithResponses) BatchQueryTokensWithBodyWithResponse(ctx context.C
 
 // BatchQueryTokensWithResponse Batch query tokens
 //
-// Query multiple tokens in one request.
+// Query multiple tokens in one request
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42473,6 +43388,14 @@ func (c *ClientWithResponses) BatchQueryTokensWithResponse(ctx context.Context, 
 //
 // Get swap/trade history for a token
 //
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
+//
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/dex/tokens/transactions`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
 // Returns a wrapper object for the known response body format(s).
@@ -42488,7 +43411,13 @@ func (c *ClientWithResponses) GetSwapListWithResponse(ctx context.Context, param
 
 // GetTrendingListWithBodyWithResponse Get trending tokens
 //
-// Get list of trending tokens.
+// Get list of trending tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42503,7 +43432,13 @@ func (c *ClientWithResponses) GetTrendingListWithBodyWithResponse(ctx context.Co
 
 // GetTrendingListWithResponse Get trending tokens
 //
-// Get list of trending tokens.
+// Get list of trending tokens
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -42530,7 +43465,7 @@ func (c *ClientWithResponses) GetTrendingListWithResponse(ctx context.Context, b
 //
 //     **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
 //
-//   - Free
+//   - Basic
 //
 //   - Builder
 //
@@ -42882,6 +43817,14 @@ func (c *ClientWithResponses) GetV1GlobalmetricsQuotesLatestWithResponse(ctx con
 //
 // Example: “[[1.23, 1.45, 1.20, 1.40, 50000, 1705363200, 128], ...]“
 //
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
+//
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/k-line/candles`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
 // Returns a wrapper object for the known response body format(s).
@@ -42905,6 +43848,14 @@ func (c *ClientWithResponses) GetKlineCandlesWithResponse(ctx context.Context, p
 // - **[2]** timestamp: UNIX timestamp (seconds)
 //
 // Example: “[[1.23, 50000, 1705363200], ...]“
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/k-line/points`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -43047,7 +43998,7 @@ func (c *ClientWithResponses) GetV1SimplePriceWithResponse(ctx context.Context, 
 // Convert APIs into postman format. You can reference the operation from [this article](https://coinmarketcap.com/alexandria/article/register-for-coinmarketcap-api).
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -43853,6 +44804,14 @@ func (c *ClientWithResponses) GetPairsLatestOHLCVWithResponse(ctx context.Contex
 //
 // Returns the latest market quote for 1 or more spot pairs. Use the "convert" option to return market values in multiple fiat and cryptocurrency conversions in the same call.
 //
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
+//
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v4/dex/pairs/quotes/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
 // Returns a wrapper object for the known response body format(s).
@@ -43884,6 +44843,14 @@ func (c *ClientWithResponses) GetPairsLatestTradeWithResponse(ctx context.Contex
 // GetSpotPairsLatestWithResponse Pairs Listings Latest
 //
 // Returns a paginated list of all active dex spot pairs with latest market data. Use the "convert" option to return market values in multiple fiat and cryptocurrency conversions in the same call.
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic
+//	- Builder
+//	- Startup
+//	- Growth
+//	- Professional
+//	- Enterprise
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v4/dex/spot-pairs/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
@@ -44019,7 +44986,7 @@ func (c *ClientWithResponses) GetV5CmcAiLatestWithResponse(ctx context.Context, 
 // Returns all active derivative market pairs that CoinMarketCap tracks for a given cryptocurrency, across exchanges.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -44142,7 +45109,7 @@ func (c *ClientWithResponses) GetV5DerivativesLiquidationsQuotesLatestWithRespon
 // Returns the list of derivatives exchanges CoinMarketCap tracks, sorted by 24-hour derivative volume in descending order by default. Only exchanges with active derivative trading (open interest or derivative volume > 0) are returned.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
@@ -44168,7 +45135,7 @@ func (c *ClientWithResponses) GetV5ExchangeDerivativesListWithResponse(ctx conte
 // Returns all active derivative market pairs that CoinMarketCap tracks for a given exchange.
 //
 //	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
-//	- Free
+//	- Basic
 //	- Builder
 //	- Startup
 //	- Growth
