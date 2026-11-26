@@ -680,18 +680,48 @@ func (e RWAMarketPairsResultsObjectMarketPairsMarketPairBaseCurrencyType) Valid(
 	}
 }
 
-// Defines values for RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType.
+// Defines values for RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType.
 const (
-	RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyTypeCryptocurrency RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType = "cryptocurrency"
-	RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyTypeFiat           RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType = "fiat"
+	RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyTypeCryptocurrency RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType = "cryptocurrency"
+	RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyTypeFiat           RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType = "fiat"
 )
 
-// Valid indicates whether the value is a known member of the RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType enum.
-func (e RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType) Valid() bool {
+// Valid indicates whether the value is a known member of the RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType enum.
+func (e RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType) Valid() bool {
 	switch e {
-	case RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyTypeCryptocurrency:
+	case RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyTypeCryptocurrency:
 		return true
-	case RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyTypeFiat:
+	case RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyTypeFiat:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for RWAQuotesHistoricalResultsObjectRwaAssetsAssetType.
+const (
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeCommodity          RWAQuotesHistoricalResultsObjectRwaAssetsAssetType = "commodity"
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeCurrency           RWAQuotesHistoricalResultsObjectRwaAssetsAssetType = "currency"
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeEtf                RWAQuotesHistoricalResultsObjectRwaAssetsAssetType = "etf"
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeGovernmentSecurity RWAQuotesHistoricalResultsObjectRwaAssetsAssetType = "government_security"
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeRealEstate         RWAQuotesHistoricalResultsObjectRwaAssetsAssetType = "real_estate"
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeStock              RWAQuotesHistoricalResultsObjectRwaAssetsAssetType = "stock"
+)
+
+// Valid indicates whether the value is a known member of the RWAQuotesHistoricalResultsObjectRwaAssetsAssetType enum.
+func (e RWAQuotesHistoricalResultsObjectRwaAssetsAssetType) Valid() bool {
+	switch e {
+	case RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeCommodity:
+		return true
+	case RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeCurrency:
+		return true
+	case RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeEtf:
+		return true
+	case RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeGovernmentSecurity:
+		return true
+	case RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeRealEstate:
+		return true
+	case RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeStock:
 		return true
 	default:
 		return false
@@ -2378,6 +2408,36 @@ func (e GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsCenterType) Val
 	}
 }
 
+// Defines values for GetV5CryptocurrencyOhlcvHistoricalParamsInterval.
+const (
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN15M GetV5CryptocurrencyOhlcvHistoricalParamsInterval = "15m"
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1D  GetV5CryptocurrencyOhlcvHistoricalParamsInterval = "1d"
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1H  GetV5CryptocurrencyOhlcvHistoricalParamsInterval = "1h"
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1M  GetV5CryptocurrencyOhlcvHistoricalParamsInterval = "1M"
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1W  GetV5CryptocurrencyOhlcvHistoricalParamsInterval = "1w"
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN4H  GetV5CryptocurrencyOhlcvHistoricalParamsInterval = "4h"
+)
+
+// Valid indicates whether the value is a known member of the GetV5CryptocurrencyOhlcvHistoricalParamsInterval enum.
+func (e GetV5CryptocurrencyOhlcvHistoricalParamsInterval) Valid() bool {
+	switch e {
+	case GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN15M:
+		return true
+	case GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1D:
+		return true
+	case GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1H:
+		return true
+	case GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1M:
+		return true
+	case GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1W:
+		return true
+	case GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN4H:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSort.
 const (
 	GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSortTotalLiquidations1H  GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSort = "total_liquidations_1h"
@@ -2744,6 +2804,96 @@ func (e GetV5RealWorldAssetsMarketPairsListParamsSortDir) Valid() bool {
 	case GetV5RealWorldAssetsMarketPairsListParamsSortDirAsc:
 		return true
 	case GetV5RealWorldAssetsMarketPairsListParamsSortDirDesc:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for GetV5RealWorldAssetsQuotesHistoricalParamsInterval.
+const (
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalDaily   GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "daily"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalHourly  GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "hourly"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalMonthly GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "monthly"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN10M    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "10m"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN12H    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "12h"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN14D    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "14d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN15D    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "15d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN15M    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "15m"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN1D     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "1d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN1H     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "1h"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN2D     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "2d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN2H     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "2h"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN30D    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "30d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN30M    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "30m"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN365D   GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "365d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN3D     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "3d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN3H     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "3h"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN45M    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "45m"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN4H     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "4h"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN5M     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "5m"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN60D    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "60d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN6H     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "6h"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN7D     GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "7d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN90D    GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "90d"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalWeekly  GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "weekly"
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalYearly  GetV5RealWorldAssetsQuotesHistoricalParamsInterval = "yearly"
+)
+
+// Valid indicates whether the value is a known member of the GetV5RealWorldAssetsQuotesHistoricalParamsInterval enum.
+func (e GetV5RealWorldAssetsQuotesHistoricalParamsInterval) Valid() bool {
+	switch e {
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalDaily:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalHourly:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalMonthly:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN10M:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN12H:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN14D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN15D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN15M:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN1D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN1H:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN2D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN2H:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN30D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN30M:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN365D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN3D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN3H:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN45M:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN4H:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN5M:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN60D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN6H:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN7D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN90D:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalWeekly:
+		return true
+	case GetV5RealWorldAssetsQuotesHistoricalParamsIntervalYearly:
 		return true
 	default:
 		return false
@@ -3673,7 +3823,7 @@ type CryptocurrenciesInfoCryptocurrencyObjectPleaseNoteThisWillBeWrappedInAnArra
 
 // CryptocurrenciesInfoResponseModel defines model for Cryptocurrencies_Info_-_Response_Model.
 type CryptocurrenciesInfoResponseModel struct {
-	// Data Results of your query returned as an object map.
+	// Data One entry per cryptocurrency requested. Requests by `id`, `slug` or `address` are keyed by cryptocurrency ID, and requests by `symbol` are keyed by symbol.
 	Data CryptocurrencyInfoResultsMap `json:"data"`
 
 	// Status Standardized status object for API calls.
@@ -3854,7 +4004,7 @@ type CryptocurrencyQuoteObject struct {
 // CryptocurrencyResultsArray Array of cryptocurrency objects matching the list options.
 type CryptocurrencyResultsArray = []CryptocurrencyCryptocurrencyObject
 
-// CryptocurrencyInfoResultsMap Results of your query returned as an object map.
+// CryptocurrencyInfoResultsMap One entry per cryptocurrency requested. Requests by `id`, `slug` or `address` are keyed by cryptocurrency ID, and requests by `symbol` are keyed by symbol.
 type CryptocurrencyInfoResultsMap map[string]CryptocurrencyInfoResultsMap_AdditionalProperties
 
 // CryptocurrencyInfoResultsMap1 defines model for CryptocurrencyInfoResultsMap.1.
@@ -4580,22 +4730,38 @@ type CryptocurrencyOHLCVHistoricalQuoteObject struct {
 
 // CryptocurrencyOHLCVHistoricalResponseModel defines model for Cryptocurrency_OHLCV_Historical_-_Response_Model.
 type CryptocurrencyOHLCVHistoricalResponseModel struct {
-	// Data A single object when you request one cryptocurrency, and an object map keyed by cryptocurrency ID when you request several.
+	// Data The shape depends on the identifiers you send:
+	//
+	// - **One cryptocurrency** - one `id` or `slug` (or one `symbol` on v1) returns the cryptocurrency object itself.
+	// - **Object map** - several `id`, `slug` or `symbol` values return an object map keyed by the identifiers you sent (IDs, slugs or symbols).
+	// - **Symbol lookups (v2)** - every v2 `symbol` request returns an object map keyed by symbol, and each value is an array of all cryptocurrencies that share the symbol, even when you send one symbol.
 	Data CryptocurrencyOHLCVHistoricalResponseModel_Data `json:"data"`
 
 	// Status Standardized status object for API calls.
 	Status *APIStatusObject `json:"status,omitempty"`
 }
 
-// CryptocurrencyOHLCVHistoricalResponseModelData0 defines model for CryptocurrencyOHLCVHistoricalResponseModel.Data.0.
-type CryptocurrencyOHLCVHistoricalResponseModelData0 map[string]CryptocurrencyOHLCVHistoricalResultsObject
+// CryptocurrencyOHLCVHistoricalResponseModelData0 One entry per identifier you sent, keyed by cryptocurrency ID, slug or symbol.
+type CryptocurrencyOHLCVHistoricalResponseModelData0 map[string]CryptocurrencyOHLCVHistoricalResponseModel_Data_0
 
-// CryptocurrencyOHLCVHistoricalResponseModel_Data A single object when you request one cryptocurrency, and an object map keyed by cryptocurrency ID when you request several.
+// CryptocurrencyOHLCVHistoricalResponseModelData01 defines model for CryptocurrencyOHLCVHistoricalResponseModel.Data.0.1.
+type CryptocurrencyOHLCVHistoricalResponseModelData01 = []CryptocurrencyOHLCVHistoricalResultsObject
+
+// CryptocurrencyOHLCVHistoricalResponseModel_Data_0 defines model for CryptocurrencyOHLCVHistoricalResponseModel.Data.0.
+type CryptocurrencyOHLCVHistoricalResponseModel_Data_0 struct {
+	union json.RawMessage
+}
+
+// CryptocurrencyOHLCVHistoricalResponseModel_Data The shape depends on the identifiers you send:
+//
+// - **One cryptocurrency** - one `id` or `slug` (or one `symbol` on v1) returns the cryptocurrency object itself.
+// - **Object map** - several `id`, `slug` or `symbol` values return an object map keyed by the identifiers you sent (IDs, slugs or symbols).
+// - **Symbol lookups (v2)** - every v2 `symbol` request returns an object map keyed by symbol, and each value is an array of all cryptocurrencies that share the symbol, even when you send one symbol.
 type CryptocurrencyOHLCVHistoricalResponseModel_Data struct {
 	union json.RawMessage
 }
 
-// CryptocurrencyOHLCVHistoricalResultsObject Results of your query returned as an object.
+// CryptocurrencyOHLCVHistoricalResultsObject A cryptocurrency and its OHLCV quotes.
 type CryptocurrencyOHLCVHistoricalResultsObject struct {
 	// ID The CoinMarketCap cryptocurrency ID.
 	ID int `json:"id"`
@@ -4608,6 +4774,33 @@ type CryptocurrencyOHLCVHistoricalResultsObject struct {
 
 	// Symbol The cryptocurrency symbol.
 	Symbol string `json:"symbol"`
+}
+
+// CryptocurrencyOHLCVHistoricalV5Candle One candle: 10 values in a fixed order. Read them by position.
+type CryptocurrencyOHLCVHistoricalV5Candle = []interface{}
+
+// CryptocurrencyOHLCVHistoricalV5ResponseModel defines model for Cryptocurrency_OHLCV_Historical_v5_-_Response_Model.
+type CryptocurrencyOHLCVHistoricalV5ResponseModel struct {
+	// Data Candles, oldest first. Empty when the window has no data.
+	//
+	// Each candle is an array of 10 values. Read them by index:
+	//
+	// | Index | Value |
+	// |---|---|
+	// | 0 | Open price |
+	// | 1 | High price |
+	// | 2 | Low price |
+	// | 3 | Close price |
+	// | 4 | Volume |
+	// | 5 | Market cap |
+	// | 6 | Open time - start of the period (ISO 8601, UTC) |
+	// | 7 | High time - time of the high price |
+	// | 8 | Low time - time of the low price |
+	// | 9 | Close time - end of the period |
+	Data []CryptocurrencyOHLCVHistoricalV5Candle `json:"data"`
+
+	// Status Standardized status object for API calls.
+	Status *APIStatusObject `json:"status,omitempty"`
 }
 
 // CryptocurrencyOHLCVLatestCryptocurrencyResultsMap A map of cryptocurrency objects by ID or symbol (as passed in query parameters).
@@ -4819,19 +5012,27 @@ type CryptocurrencyQuotesHistoricalQuoteCurrencyMap map[string]CryptocurrencyQuo
 
 // CryptocurrencyQuotesHistoricalResponseModel defines model for Cryptocurrency_Quotes_Historical_-_Response_Model.
 type CryptocurrencyQuotesHistoricalResponseModel struct {
-	// Data The v3 endpoint always returns an object map keyed by cryptocurrency ID. The v1 and v2 endpoints return a single object when you request one cryptocurrency, and an object map keyed by ID when you request several.
+	// Data The shape depends on the endpoint version and on the identifiers you send:
+	//
+	// - **One cryptocurrency (v1 and v2)** - one `id`, or one `symbol` on v1, returns the cryptocurrency object itself.
+	// - **Object map** - several `id` or `symbol` values on v1 and v2, and every v3 request, return an object map keyed by the identifiers you sent (IDs or symbols).
+	// - **Symbol lookups (v2 and v3)** - each map value is an array of all cryptocurrencies that share the symbol, even when you send one symbol.
 	Data CryptocurrencyQuotesHistoricalResponseModel_Data `json:"data"`
 
 	// Status Standardized status object for API calls.
 	Status *APIStatusObject `json:"status,omitempty"`
 }
 
-// CryptocurrencyQuotesHistoricalResponseModel_Data The v3 endpoint always returns an object map keyed by cryptocurrency ID. The v1 and v2 endpoints return a single object when you request one cryptocurrency, and an object map keyed by ID when you request several.
+// CryptocurrencyQuotesHistoricalResponseModel_Data The shape depends on the endpoint version and on the identifiers you send:
+//
+// - **One cryptocurrency (v1 and v2)** - one `id`, or one `symbol` on v1, returns the cryptocurrency object itself.
+// - **Object map** - several `id` or `symbol` values on v1 and v2, and every v3 request, return an object map keyed by the identifiers you sent (IDs or symbols).
+// - **Symbol lookups (v2 and v3)** - each map value is an array of all cryptocurrencies that share the symbol, even when you send one symbol.
 type CryptocurrencyQuotesHistoricalResponseModel_Data struct {
 	union json.RawMessage
 }
 
-// CryptocurrencyQuotesHistoricalResultObject A results object for each cryptocurrency requested. The map key being the id/symbol used in the request.
+// CryptocurrencyQuotesHistoricalResultObject A cryptocurrency and its historical quotes.
 type CryptocurrencyQuotesHistoricalResultObject struct {
 	// ID The CoinMarketCap cryptocurrency ID.
 	ID int `json:"id"`
@@ -4852,10 +5053,18 @@ type CryptocurrencyQuotesHistoricalResultObject struct {
 	Symbol string `json:"symbol"`
 }
 
-// CryptocurrencyQuotesHistoricalResultsMap Results of your query returned as an object map.
-type CryptocurrencyQuotesHistoricalResultsMap map[string]CryptocurrencyQuotesHistoricalResultObject
+// CryptocurrencyQuotesHistoricalResultsMap One entry per identifier you sent, keyed by cryptocurrency ID or symbol.
+type CryptocurrencyQuotesHistoricalResultsMap map[string]CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties
 
-// CryptocurrencyQuotesLatestCryptocurrencyResultsMap A map of cryptocurrency objects by ID, symbol, or slug (as used in query parameters).
+// CryptocurrencyQuotesHistoricalResultsMap1 defines model for CryptocurrencyQuotesHistoricalResultsMap.1.
+type CryptocurrencyQuotesHistoricalResultsMap1 = []CryptocurrencyQuotesHistoricalResultObject
+
+// CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties defines model for Cryptocurrency_Quotes_Historical_-_Results_map.AdditionalProperties.
+type CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// CryptocurrencyQuotesLatestCryptocurrencyResultsMap One entry per cryptocurrency requested. Requests by `id` or `slug` are keyed by cryptocurrency ID, and requests by `symbol` are keyed by symbol.
 type CryptocurrencyQuotesLatestCryptocurrencyResultsMap map[string]CryptocurrencyQuotesLatestCryptocurrencyResultsMap_AdditionalProperties
 
 // CryptocurrencyQuotesLatestCryptocurrencyResultsMap1 defines model for CryptocurrencyQuotesLatestCryptocurrencyResultsMap.1.
@@ -5029,7 +5238,7 @@ type CryptocurrencyQuotesLatestQuoteObject struct {
 
 // CryptocurrencyQuotesLatestResponseModel defines model for Cryptocurrency_Quotes_Latest_-_Response_Model.
 type CryptocurrencyQuotesLatestResponseModel struct {
-	// Data A map of cryptocurrency objects by ID, symbol, or slug (as used in query parameters).
+	// Data One entry per cryptocurrency requested. Requests by `id` or `slug` are keyed by cryptocurrency ID, and requests by `symbol` are keyed by symbol.
 	Data CryptocurrencyQuotesLatestCryptocurrencyResultsMap `json:"data"`
 
 	// Status Standardized status object for API calls.
@@ -6572,22 +6781,22 @@ type ExchangeHistoricalQuotesQuoteCurrencyMap map[string]ExchangeHistoricalQuote
 
 // ExchangeHistoricalQuotesResponseModel defines model for Exchange_Historical_Quotes_-_Response_Model.
 type ExchangeHistoricalQuotesResponseModel struct {
-	// Data A single object when you request one exchange, and an object map keyed by exchange ID when you request several.
+	// Data One exchange returns the exchange object itself. Several exchanges return an object map with one entry per exchange, keyed by the identifiers you sent: exchange IDs for `id` requests and slugs for `slug` requests.
 	Data ExchangeHistoricalQuotesResponseModel_Data `json:"data"`
 
 	// Status Standardized status object for API calls.
 	Status *APIStatusObject `json:"status,omitempty"`
 }
 
-// ExchangeHistoricalQuotesResponseModel_Data A single object when you request one exchange, and an object map keyed by exchange ID when you request several.
+// ExchangeHistoricalQuotesResponseModel_Data One exchange returns the exchange object itself. Several exchanges return an object map with one entry per exchange, keyed by the identifiers you sent: exchange IDs for `id` requests and slugs for `slug` requests.
 type ExchangeHistoricalQuotesResponseModel_Data struct {
 	union json.RawMessage
 }
 
-// ExchangeHistoricalQuotesResultsMap Results of your query returned as an object map.
+// ExchangeHistoricalQuotesResultsMap One entry per exchange requested, keyed by the exchange ID or slug you sent.
 type ExchangeHistoricalQuotesResultsMap map[string]ExchangeHistoricalQuotesExchangeObject
 
-// ExchangeHistoricalQuotesExchangeObject An exchange object for each exchange requested. The map key being the id/slug used in the request.
+// ExchangeHistoricalQuotesExchangeObject An exchange and its historical quotes.
 type ExchangeHistoricalQuotesExchangeObject struct {
 	// ID The CoinMarketCap exchange ID.
 	ID int `json:"id"`
@@ -8670,7 +8879,7 @@ type RWAIDMapResultsObject_RwaAssets struct {
 	// AssetType Asset type. One of `stock`, `commodity`, `currency`, `government_security`, `etf`, `real_estate`.
 	AssetType *RWAIDMapResultsObjectRwaAssetsAssetType `json:"asset_type,omitempty"`
 
-	// FirstHistoricalData ISO 8601 timestamp of the earliest historical data point available; `null` if none.
+	// FirstHistoricalData ISO 8601 timestamp of the earliest price data CoinMarketCap holds for the underlying asset, for example 2009 for gold; `null` if none. The tokenized history in [/v5/real-world-assets/quotes/historical](/pro-api-reference/real-world-assets#quotes-historical-4) starts later, no earlier than January 1, 2020.
 	FirstHistoricalData *time.Time `json:"first_historical_data,omitempty"`
 
 	// HasTokens `true` if at least one token exists for this asset; `false` if there are no tokenized assets.
@@ -8947,16 +9156,16 @@ type RWAMarketPairsResultsObject_MarketPairs_MarketPairBase struct {
 	Symbol *string `json:"symbol,omitempty"`
 }
 
-// RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType Currency type. One of `cryptocurrency`, `fiat`.
-type RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType string
+// RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType Currency type. One of `cryptocurrency`, `fiat`.
+type RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType string
 
-// RWAMarketPairsResultsObject_MarketPairs_MarketPairQuotes Quote side of the pair.
-type RWAMarketPairsResultsObject_MarketPairs_MarketPairQuotes struct {
+// RWAMarketPairsResultsObject_MarketPairs_MarketPairQuote Quote side of the pair.
+type RWAMarketPairsResultsObject_MarketPairs_MarketPairQuote struct {
 	// CryptoID Underlying token's CoinMarketCap cryptocurrency ID.
 	CryptoID *int `json:"crypto_id,omitempty"`
 
 	// CurrencyType Currency type. One of `cryptocurrency`, `fiat`.
-	CurrencyType *RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType `json:"currency_type,omitempty"`
+	CurrencyType *RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType `json:"currency_type,omitempty"`
 
 	// ExchangeSymbol Symbol as the exchange labels it.
 	ExchangeSymbol *string `json:"exchange_symbol,omitempty"`
@@ -9006,11 +9215,77 @@ type RWAMarketPairsResultsObject_MarketPairs struct {
 	// MarketPairBase Base side of the pair (the RWA token).
 	MarketPairBase *RWAMarketPairsResultsObject_MarketPairs_MarketPairBase `json:"market_pair_base,omitempty"`
 
-	// MarketPairQuotes Quote side of the pair.
-	MarketPairQuotes *RWAMarketPairsResultsObject_MarketPairs_MarketPairQuotes `json:"market_pair_quotes,omitempty"`
+	// MarketPairQuote Quote side of the pair.
+	MarketPairQuote *RWAMarketPairsResultsObject_MarketPairs_MarketPairQuote `json:"market_pair_quote,omitempty"`
 
 	// Quotes Converted price/volume; one object per `convert`/`convert_id` currency.
 	Quotes *[]RWAMarketPairsResultsObject_MarketPairs_Quotes `json:"quotes,omitempty"`
+}
+
+// RWAQuotesHistoricalResponseModel defines model for RWA_Quotes_Historical_-_Response_Model.
+type RWAQuotesHistoricalResponseModel struct {
+	// Data Results of your query returned as an object.
+	Data RWAQuotesHistoricalResultsObject `json:"data"`
+
+	// Status Standardized status object for API calls.
+	Status *APIStatusObject `json:"status,omitempty"`
+}
+
+// RWAQuotesHistoricalResultsObject Results of your query returned as an object.
+type RWAQuotesHistoricalResultsObject struct {
+	// RwaAssets One object per requested RWA asset, in the order requested.
+	RwaAssets *[]RWAQuotesHistoricalResultsObject_RwaAssets `json:"rwa_assets,omitempty"`
+}
+
+// RWAQuotesHistoricalResultsObjectRwaAssetsAssetType Asset type. One of `stock`, `commodity`, `currency`, `government_security`, `etf`, `real_estate`.
+type RWAQuotesHistoricalResultsObjectRwaAssetsAssetType string
+
+// RWAQuotesHistoricalResultsObject_RwaAssets_Quotes defines model for RWAQuotesHistoricalResultsObject.RwaAssets.Quotes.
+type RWAQuotesHistoricalResultsObject_RwaAssets_Quotes struct {
+	// AverageTokenizedPrice Aggregate price across the underlying tokens, in the convert currency.
+	AverageTokenizedPrice *float64 `json:"average_tokenized_price,omitempty"`
+
+	// ConvertID CoinMarketCap ID of the convert currency (`2781` for USD).
+	ConvertID *int `json:"convert_id,omitempty"`
+
+	// ConvertSymbol Symbol of the convert currency.
+	ConvertSymbol *string `json:"convert_symbol,omitempty"`
+
+	// Timestamp Start of the interval period the data point belongs to (ISO 8601, UTC).
+	Timestamp *time.Time `json:"timestamp,omitempty"`
+
+	// TokenizedMarketCap Aggregate tokenized market cap, in the convert currency.
+	TokenizedMarketCap *float64 `json:"tokenized_market_cap,omitempty"`
+
+	// TokenizedVolume24H Aggregate trailing 24h tokenized volume, in the convert currency.
+	TokenizedVolume24H *float64 `json:"tokenized_volume_24h,omitempty"`
+}
+
+// RWAQuotesHistoricalResultsObject_RwaAssets defines model for RWAQuotesHistoricalResultsObject.RwaAssets.
+type RWAQuotesHistoricalResultsObject_RwaAssets struct {
+	// AssetType Asset type. One of `stock`, `commodity`, `currency`, `government_security`, `etf`, `real_estate`.
+	AssetType *RWAQuotesHistoricalResultsObjectRwaAssetsAssetType `json:"asset_type,omitempty"`
+
+	// HasTokens `true` if at least one token exists for this asset; `false` if there are no tokenized assets, in which case `quotes` is empty.
+	HasTokens *bool `json:"has_tokens,omitempty"`
+
+	// Name Asset display name.
+	Name *string `json:"name,omitempty"`
+
+	// Quotes The time series: one entry per data point per convert currency, oldest first and grouped by currency in the order requested. Empty when the asset has no tokens or no data in the window.
+	Quotes *[]RWAQuotesHistoricalResultsObject_RwaAssets_Quotes `json:"quotes,omitempty"`
+
+	// RwaID RWA asset ID; the stable identifier to use across the RWA family.
+	RwaID *int `json:"rwa_id,omitempty"`
+
+	// RwaRank Current RWA market-cap rank (1 = highest), not the rank at each data point. RWA-specific ranking, distinct from `cmc_rank`.
+	RwaRank *int `json:"rwa_rank,omitempty"`
+
+	// Slug URL-friendly lowercase slug.
+	Slug *string `json:"slug,omitempty"`
+
+	// Symbol Asset symbol / ticker.
+	Symbol *string `json:"symbol,omitempty"`
 }
 
 // RWAQuotesLatestResponseModel defines model for RWA_Quotes_Latest_-_Response_Model.
@@ -10440,14 +10715,20 @@ type SourceCode = []string
 
 // Status defines model for status.
 type Status struct {
+	// Category Error category on some v5 endpoints, for example `VALIDATION` for an invalid parameter or `AUTH` for a plan limit.
+	Category *string `json:"category,omitempty"`
+
 	// CreditCount Number of API call credits required for this call. Always 0 for errors.
 	CreditCount int `json:"credit_count"`
 
 	// Elapsed Number of milliseconds taken to generate this response
 	Elapsed int `json:"elapsed"`
 
-	// ErrorCode An internal error code for the current error. If a unique platform error code is not available the HTTP status code is returned.
-	ErrorCode int `json:"error_code"`
+	// ErrorCode An internal error code for the current error. If a unique platform error code is not available the HTTP status code is returned. Some endpoints return this code as a string, for example `"4001"`.
+	ErrorCode interface{} `json:"error_code"`
+
+	// ErrorDetail On some v5 endpoints, a more specific explanation of the error, such as the parameter that was rejected.
+	ErrorDetail *string `json:"error_detail,omitempty"`
 
 	// ErrorMessage An error message to go along with the error code.
 	ErrorMessage string `json:"error_message"`
@@ -12679,6 +12960,33 @@ type GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsFeeType string
 // GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsCenterType defines parameters for GetV5CryptocurrencyDerivativesMarketPairsListLatest.
 type GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsCenterType string
 
+// GetV5CryptocurrencyOhlcvHistoricalParams defines parameters for GetV5CryptocurrencyOhlcvHistorical.
+type GetV5CryptocurrencyOhlcvHistoricalParams struct {
+	// ID One CoinMarketCap cryptocurrency ID. Example: `1`. Send either `id` or `slug`.
+	ID *string `form:"id,omitempty" json:"id,omitempty"`
+
+	// Slug Alternatively, one cryptocurrency slug. Example: `bitcoin`. Send either `id` or `slug`.
+	Slug *string `form:"slug,omitempty" json:"slug,omitempty"`
+
+	// Interval Candle period. `15m`, `1h` and `4h` start on UTC quarter-hours, hours and 4-hour blocks, `1d` on UTC days, `1w` on Mondays at 00:00 UTC, and `1M` on the first day of each month at 00:00 UTC. Values are case-sensitive: `1M` is a month, and `1m` is not accepted.
+	Interval GetV5CryptocurrencyOhlcvHistoricalParamsInterval `form:"interval" json:"interval"`
+
+	// TimeStart Start of the window, inclusive, as a Unix timestamp or ISO 8601. Rounded down to the start of its interval period. See the time window rules above.
+	TimeStart *string `form:"time_start,omitempty" json:"time_start,omitempty"`
+
+	// TimeEnd End of the window, inclusive, as a Unix timestamp or ISO 8601. When you also send `time_start` and `count`, it does not change the window.
+	TimeEnd *string `form:"time_end,omitempty" json:"time_end,omitempty"`
+
+	// Count Number of candle periods to return, from 1 to 10000. Defaults to 10 unless you send both `time_start` and `time_end`.
+	Count *int `form:"count,omitempty" json:"count,omitempty"`
+
+	// ConvertID One CoinMarketCap currency ID to return prices, volume and market cap in. Example: `2781` (USD). Defaults to USD. To get more currencies, make one request per currency.
+	ConvertID *string `form:"convert_id,omitempty" json:"convert_id,omitempty"`
+}
+
+// GetV5CryptocurrencyOhlcvHistoricalParamsInterval defines parameters for GetV5CryptocurrencyOhlcvHistorical.
+type GetV5CryptocurrencyOhlcvHistoricalParamsInterval string
+
 // GetV5DerivativesLiquidationsCryptocurrencyListLatestParams defines parameters for GetV5DerivativesLiquidationsCryptocurrencyListLatest.
 type GetV5DerivativesLiquidationsCryptocurrencyListLatestParams struct {
 	// CryptoID Optionally filter to one or more comma-separated CoinMarketCap cryptocurrency IDs. Example: `1,1027`. Cannot be combined with `crypto_slug` or `symbol`.
@@ -12991,6 +13299,42 @@ type GetV5RealWorldAssetsMarketPairsListParamsSort string
 // GetV5RealWorldAssetsMarketPairsListParamsSortDir defines parameters for GetV5RealWorldAssetsMarketPairsList.
 type GetV5RealWorldAssetsMarketPairsListParamsSortDir string
 
+// GetV5RealWorldAssetsQuotesHistoricalParams defines parameters for GetV5RealWorldAssetsQuotesHistorical.
+type GetV5RealWorldAssetsQuotesHistoricalParams struct {
+	// RwaID One or more comma-separated RWA asset IDs. Example: `1,2`. Only one identifier type (`rwa_id`, `rwa_slug`, or `symbol`) may be used per request.
+	RwaID *string `form:"rwa_id,omitempty" json:"rwa_id,omitempty"`
+
+	// RwaSlug Alternatively pass RWA asset slugs. Example: `nvidia,gold`.
+	RwaSlug *string `form:"rwa_slug,omitempty" json:"rwa_slug,omitempty"`
+
+	// Symbol Alternatively pass RWA asset symbols / tickers. Example: `NVDA,GOLD`.
+	Symbol *string `form:"symbol,omitempty" json:"symbol,omitempty"`
+
+	// TimeStart Start of the window, inclusive, as a Unix timestamp or ISO 8601. Rounded down to the start of its interval period. See the time window rules above.
+	TimeStart *string `form:"time_start,omitempty" json:"time_start,omitempty"`
+
+	// TimeEnd End of the window, inclusive, as a Unix timestamp or ISO 8601. Rounded down to the start of its interval period. See the time window rules above.
+	TimeEnd *string `form:"time_end,omitempty" json:"time_end,omitempty"`
+
+	// Count Number of interval periods to return, from 1 to 10000. Defaults to 10 unless you send both `time_start` and `time_end`.
+	Count *int `form:"count,omitempty" json:"count,omitempty"`
+
+	// Interval Interval between data points. Calendar intervals (`hourly`, `daily`, `weekly`, `monthly`, `yearly`) return the first value in each calendar period. Relative intervals return the first value every N minutes (`5m` to `45m`), hours (`1h` to `12h`) or days (`1d` to `365d`). Sub-daily intervals have lookback limits, listed above.
+	Interval *GetV5RealWorldAssetsQuotesHistoricalParamsInterval `form:"interval,omitempty" json:"interval,omitempty"`
+
+	// Convert Calculate the tokenized values in up to 3 fiat or cryptocurrency currencies, as a comma-separated list of symbols. Each currency beyond the first costs 1 more call credit and returns its own set of `quotes` entries, tagged with `convert_id` and `convert_symbol`. This parameter cannot be used when `convert_id` is used.
+	Convert *string `form:"convert,omitempty" json:"convert,omitempty"`
+
+	// ConvertID Calculate the tokenized values by CoinMarketCap ID instead of symbol, up to 3 IDs. This option is identical to `convert` outside of ID format. Ex: convert_id=2781 would replace convert=USD in your query. This parameter cannot be used when `convert` is used.
+	ConvertID *string `form:"convert_id,omitempty" json:"convert_id,omitempty"`
+
+	// SkipInvalid Pass `true` to relax request validation rules. When requesting records on multiple RWA assets an error is returned if no match is found for one or more requested assets. If set to `true`, invalid lookups will be skipped allowing valid assets to still be returned. Skipped identifiers are listed in `status.notice`. If no identifier is valid, the request fails with `400`.
+	SkipInvalid *string `form:"skip_invalid,omitempty" json:"skip_invalid,omitempty"`
+}
+
+// GetV5RealWorldAssetsQuotesHistoricalParamsInterval defines parameters for GetV5RealWorldAssetsQuotesHistorical.
+type GetV5RealWorldAssetsQuotesHistoricalParamsInterval string
+
 // GetV5RealWorldAssetsQuotesLatestParams defines parameters for GetV5RealWorldAssetsQuotesLatest.
 type GetV5RealWorldAssetsQuotesLatestParams struct {
 	// RwaID One or more comma-separated RWA asset IDs. Example: `1,2`. Only one identifier type (`rwa_id`, `rwa_slug`, or `symbol`) may be used per request.
@@ -13230,6 +13574,68 @@ func (t *CryptocurrencyInfoResultsMap_AdditionalProperties) UnmarshalJSON(b []by
 	return err
 }
 
+// AsCryptocurrencyOHLCVHistoricalResultsObject returns the union data inside the CryptocurrencyOHLCVHistoricalResponseModel_Data_0 as a CryptocurrencyOHLCVHistoricalResultsObject
+func (t CryptocurrencyOHLCVHistoricalResponseModel_Data_0) AsCryptocurrencyOHLCVHistoricalResultsObject() (CryptocurrencyOHLCVHistoricalResultsObject, error) {
+	var body CryptocurrencyOHLCVHistoricalResultsObject
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCryptocurrencyOHLCVHistoricalResultsObject overwrites any union data inside the CryptocurrencyOHLCVHistoricalResponseModel_Data_0 as the provided CryptocurrencyOHLCVHistoricalResultsObject
+func (t *CryptocurrencyOHLCVHistoricalResponseModel_Data_0) FromCryptocurrencyOHLCVHistoricalResultsObject(v CryptocurrencyOHLCVHistoricalResultsObject) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCryptocurrencyOHLCVHistoricalResultsObject performs a merge with any union data inside the CryptocurrencyOHLCVHistoricalResponseModel_Data_0, using the provided CryptocurrencyOHLCVHistoricalResultsObject
+func (t *CryptocurrencyOHLCVHistoricalResponseModel_Data_0) MergeCryptocurrencyOHLCVHistoricalResultsObject(v CryptocurrencyOHLCVHistoricalResultsObject) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCryptocurrencyOHLCVHistoricalResponseModelData01 returns the union data inside the CryptocurrencyOHLCVHistoricalResponseModel_Data_0 as a CryptocurrencyOHLCVHistoricalResponseModelData01
+func (t CryptocurrencyOHLCVHistoricalResponseModel_Data_0) AsCryptocurrencyOHLCVHistoricalResponseModelData01() (CryptocurrencyOHLCVHistoricalResponseModelData01, error) {
+	var body CryptocurrencyOHLCVHistoricalResponseModelData01
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCryptocurrencyOHLCVHistoricalResponseModelData01 overwrites any union data inside the CryptocurrencyOHLCVHistoricalResponseModel_Data_0 as the provided CryptocurrencyOHLCVHistoricalResponseModelData01
+func (t *CryptocurrencyOHLCVHistoricalResponseModel_Data_0) FromCryptocurrencyOHLCVHistoricalResponseModelData01(v CryptocurrencyOHLCVHistoricalResponseModelData01) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCryptocurrencyOHLCVHistoricalResponseModelData01 performs a merge with any union data inside the CryptocurrencyOHLCVHistoricalResponseModel_Data_0, using the provided CryptocurrencyOHLCVHistoricalResponseModelData01
+func (t *CryptocurrencyOHLCVHistoricalResponseModel_Data_0) MergeCryptocurrencyOHLCVHistoricalResponseModelData01(v CryptocurrencyOHLCVHistoricalResponseModelData01) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CryptocurrencyOHLCVHistoricalResponseModel_Data_0) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CryptocurrencyOHLCVHistoricalResponseModel_Data_0) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
 // AsCryptocurrencyOHLCVHistoricalResponseModelData0 returns the union data inside the CryptocurrencyOHLCVHistoricalResponseModel_Data as a CryptocurrencyOHLCVHistoricalResponseModelData0
 func (t CryptocurrencyOHLCVHistoricalResponseModel_Data) AsCryptocurrencyOHLCVHistoricalResponseModelData0() (CryptocurrencyOHLCVHistoricalResponseModelData0, error) {
 	var body CryptocurrencyOHLCVHistoricalResponseModelData0
@@ -13350,6 +13756,68 @@ func (t CryptocurrencyQuotesHistoricalResponseModel_Data) MarshalJSON() ([]byte,
 }
 
 func (t *CryptocurrencyQuotesHistoricalResponseModel_Data) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCryptocurrencyQuotesHistoricalResultObject returns the union data inside the CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties as a CryptocurrencyQuotesHistoricalResultObject
+func (t CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties) AsCryptocurrencyQuotesHistoricalResultObject() (CryptocurrencyQuotesHistoricalResultObject, error) {
+	var body CryptocurrencyQuotesHistoricalResultObject
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCryptocurrencyQuotesHistoricalResultObject overwrites any union data inside the CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties as the provided CryptocurrencyQuotesHistoricalResultObject
+func (t *CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties) FromCryptocurrencyQuotesHistoricalResultObject(v CryptocurrencyQuotesHistoricalResultObject) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCryptocurrencyQuotesHistoricalResultObject performs a merge with any union data inside the CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties, using the provided CryptocurrencyQuotesHistoricalResultObject
+func (t *CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties) MergeCryptocurrencyQuotesHistoricalResultObject(v CryptocurrencyQuotesHistoricalResultObject) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCryptocurrencyQuotesHistoricalResultsMap1 returns the union data inside the CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties as a CryptocurrencyQuotesHistoricalResultsMap1
+func (t CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties) AsCryptocurrencyQuotesHistoricalResultsMap1() (CryptocurrencyQuotesHistoricalResultsMap1, error) {
+	var body CryptocurrencyQuotesHistoricalResultsMap1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCryptocurrencyQuotesHistoricalResultsMap1 overwrites any union data inside the CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties as the provided CryptocurrencyQuotesHistoricalResultsMap1
+func (t *CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties) FromCryptocurrencyQuotesHistoricalResultsMap1(v CryptocurrencyQuotesHistoricalResultsMap1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCryptocurrencyQuotesHistoricalResultsMap1 performs a merge with any union data inside the CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties, using the provided CryptocurrencyQuotesHistoricalResultsMap1
+func (t *CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties) MergeCryptocurrencyQuotesHistoricalResultsMap1(v CryptocurrencyQuotesHistoricalResultsMap1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -13821,7 +14289,7 @@ type ClientInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/cryptocurrency/categories`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Data is updated only as needed, every 30 seconds.
+	// **Cache / Update frequency:** Every 5 to 15 minutes.
 	// **Plan credit use:** 1 API call credit per request + 1 call credit per 200 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our free airdrops page [coinmarketcap.com/cryptocurrency-category/](https://coinmarketcap.com/cryptocurrency-category/).
 	//
@@ -13842,7 +14310,7 @@ type ClientInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/cryptocurrency/category`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Data is updated only as needed, every 30 seconds.
+	// **Cache / Update frequency:** Every 15 seconds for cryptocurrency quotes, and every 5 to 15 minutes for category statistics.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our Cryptocurrency Category page [coinmarketcap.com/cryptocurrency-category/](https://coinmarketcap.com/cryptocurrency-category/).
 	//
@@ -13964,7 +14432,7 @@ type ClientInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	// **Cache / Update frequency:** Every 60 seconds.
+	// **Cache / Update frequency:** Every 15 seconds for quotes. Newly added cryptocurrencies usually appear in the list within 10 minutes.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our "new" cryptocurrency page [coinmarketcap.com/new/](https://coinmarketcap.com/new)
 	//
@@ -14213,7 +14681,7 @@ type ClientInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	// **Cache / Update frequency:** Every 10 minutes.
+	// **Cache / Update frequency:** Every 60 seconds for the list, and every 15 to 25 seconds for quotes.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our cryptocurrency Gainers & Losers page [coinmarketcap.com/gainers-losers/](https://coinmarketcap.com/gainers-losers/).
 	//
@@ -14232,7 +14700,7 @@ type ClientInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	// **Cache / Update frequency:** Every 10 minutes.
+	// **Cache / Update frequency:** Every 10 minutes for the list (every 12 hours for the 30d list), and every 15 to 25 seconds for quotes. The default first page (`start=1`, `limit=100`, USD) can be up to 10 minutes old.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our cryptocurrency Trending page [coinmarketcap.com/trending-cryptocurrencies/](https://coinmarketcap.com/trending-cryptocurrencies/).
 	//
@@ -14251,7 +14719,7 @@ type ClientInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	// **Cache / Update frequency:** Every 24 hours.
+	// **Cache / Update frequency:** Every 4 hours for the list, and every 15 to 25 seconds for quotes.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** The CoinMarketCap “Most Visited” trending list. [coinmarketcap.com/most-viewed-pages/](https://coinmarketcap.com/most-viewed-pages/).
 	//
@@ -15237,11 +15705,13 @@ type ClientInterface interface {
 	// Corresponds with GET /v2/cryptocurrency/market-pairs/latest (the `GetV2CryptocurrencyMarketpairsLatest` operationId).
 	GetV2CryptocurrencyMarketpairsLatest(ctx context.Context, params *GetV2CryptocurrencyMarketpairsLatestParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// GetV2CryptocurrencyOhlcvHistorical OHLCV Historical
+	// GetV2CryptocurrencyOhlcvHistorical OHLCV Historical v2 (deprecated)
+	//
+	// **Deprecated.** Use [/v5/cryptocurrency/ohlcv/historical](/pro-api-reference/cryptocurrency#ohlcv-historical) instead. It returns the same candles as compact rows, one cryptocurrency per request, with calendar-week (`1w`) and calendar-month (`1M`) intervals and a simpler time window.
 	//
 	// Returns historical OHLCV (Open, High, Low, Close, Volume) data along with market cap for any cryptocurrency using time interval parameters. Currently daily and hourly OHLCV periods are supported. Volume is not currently supported for hourly OHLCV intervals before 2020-09-22.
 	//
-	// **Please note**: This documentation relates to our updated V2 endpoint, which may be incompatible with our V1 versions. Documentation for deprecated endpoints can be found [the deprecated section](/pro-api-reference/deprecated).
+	// **Please note**: This documentation relates to our updated V2 endpoint, which may be incompatible with our earlier versions. Documentation for deprecated endpoints can be found [the deprecated section](/pro-api-reference/deprecated).
 	//
 	//
 	// **Technical Notes**
@@ -15305,7 +15775,7 @@ type ClientInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	//   **Cache / Update frequency:** Every 10 minutes. Additional OHLCV intervals and 1 minute updates will be available in the future.
+	//   **Cache / Update frequency:** Every 15 to 25 seconds for `close`, and every 5 to 7 minutes for `open`, `high`, `low`, and `volume`. Additional OHLCV intervals and 1 minute updates will be available in the future.
 	//   **Plan credit use:** 1 call credit per 250 OHLCV values returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	//   **CMC equivalent pages:** No equivalent, this data is only available via API.
 	//
@@ -15440,7 +15910,7 @@ type ClientInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v2/simple/price`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Every 60 seconds.
+	// **Cache / Update frequency:** Every 15 to 25 seconds.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up), plus 1 credit per `convert` / `convert_id` option beyond the first. The `include_*` flags do not add credits.
 	//
 	// Corresponds with GET /v2/simple/price (the `GetV2SimplePrice` operationId).
@@ -15510,7 +15980,7 @@ type ClientInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v3/cryptocurrency/listings/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Every 60 seconds.
+	// **Cache / Update frequency:** Every 15 seconds.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per \`convert\` option beyond the first.
 	// **CMC equivalent pages:** Our latest cryptocurrency listing and ranking pages like [coinmarketcap.com/all/views/all/](https://coinmarketcap.com/all/views/all/), [coinmarketcap.com/tokens/](https://coinmarketcap.com/tokens/), [coinmarketcap.com/gainers-losers/](https://coinmarketcap.com/gainers-losers/), [coinmarketcap.com/new/](https://coinmarketcap.com/new/).
 	//
@@ -15586,7 +16056,7 @@ type ClientInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v3/cryptocurrency/quotes/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Every 60 seconds.
+	// **Cache / Update frequency:** Every 15 to 25 seconds.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per \`convert\` option beyond the first.
 	// **CMC equivalent pages:** Latest market data pages for specific cryptocurrencies like [coinmarketcap.com/currencies/bitcoin/](https://coinmarketcap.com/currencies/bitcoin/).
 	//
@@ -15922,6 +16392,65 @@ type ClientInterface interface {
 	// Corresponds with GET /v5/cryptocurrency/derivatives/market-pairs/list/latest (the `GetV5CryptocurrencyDerivativesMarketPairsListLatest` operationId).
 	GetV5CryptocurrencyDerivativesMarketPairsListLatest(ctx context.Context, params *GetV5CryptocurrencyDerivativesMarketPairsListLatestParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// GetV5CryptocurrencyOhlcvHistorical OHLCV Historical
+	//
+	// Returns historical OHLCV (open, high, low, close, volume) candles for one cryptocurrency, together with the market cap and the times of the high and the low in each candle. Each candle is a compact row of 10 values instead of a nested object, so long histories stay small and load straight into charting and analysis tools.
+	//
+	// Compared with the deprecated [/v2/cryptocurrency/ohlcv/historical](/pro-api-reference/deprecated#ohlcv-historical-v2-deprecated), this endpoint:
+	//
+	// - returns one cryptocurrency per request, by `id` or `slug`, in one currency set with `convert_id`.
+	// - uses the interval names `15m`, `1h`, `4h`, `1d`, `1w` and `1M`. `1w` is a calendar week starting on Monday and `1M` is a calendar month.
+	// - uses `time_start` and `count` when you send `time_start`, `time_end` and `count` together, instead of working out `count` from the time range.
+	// - rejects parameters it does not support, such as `symbol`, `convert`, `time_period` and `skip_invalid`, with a `400` error instead of ignoring them.
+	//
+	// **Candle rows**
+	//
+	// `data` is an array of candles, oldest first. Each candle is an array of 10 values in this fixed order, so read the values by position:
+	//
+	// | Index | Field | Type | Description |
+	// | --- | --- | --- | --- |
+	// | 0 | `openPrice` | number | Open price: the first price in the period. |
+	// | 1 | `highPrice` | number | High price: the highest price in the period. |
+	// | 2 | `lowPrice` | number | Low price: the lowest price in the period. |
+	// | 3 | `closePrice` | number | Close price: the last price in the period. |
+	// | 4 | `volume` | number | Trading volume in the period. |
+	// | 5 | `marketcap` | number | Market cap at the close of the period. |
+	// | 6 | `openTime` | string | Start of the period (ISO 8601, UTC). |
+	// | 7 | `highTime` | string | Time of the high price (ISO 8601, UTC). |
+	// | 8 | `lowTime` | string | Time of the low price (ISO 8601, UTC). |
+	// | 9 | `closeTime` | string | End of the period (ISO 8601, UTC), for example `2025-01-02T23:59:59.999Z`. |
+	//
+	// Prices, volume and market cap are in the currency set by `convert_id`. A value that is not available is returned as `null` in its position. Periods with no data, future periods and the period that is still open are left out, so a request with no data returns an empty `data` array.
+	//
+	// **Time window**
+	//
+	// `time_start` and `time_end` are inclusive, and both are rounded down to the start of their interval period in UTC. The window depends on which parameters you send:
+	//
+	// - `time_start` and `time_end`: every period in the range, up to 10000 periods.
+	// - `time_start` and `count`: `count` periods starting at `time_start`.
+	// - `time_end` and `count`: `count` periods ending with the period that contains `time_end`.
+	// - `time_start`, `time_end` and `count`: `count` periods starting at `time_start`. `time_end` must still be a valid timestamp, but it does not change the window.
+	// - Neither `time_start` nor `time_end`: the `count` most recent completed periods.
+	//
+	// `count` defaults to 10 when you do not send both `time_start` and `time_end`.
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - ~~Basic~~
+	//   - ~~Builder~~
+	//   - Startup (intraday: 1 month, daily: from 2010)
+	//   - Growth (intraday: 3 months, daily: from 2010)
+	//   - Professional (intraday: 12 months, daily: from 2010)
+	//   - Enterprise (intraday: from 2010, daily: from 2010)
+	//
+	// **Note:** Intraday = `15m`, `1h` and `4h` intervals, Daily = `1d`, `1w` and `1M` intervals
+	//
+	// **Cache / Update frequency:** Each candle is returned once its period has closed.
+	// **Plan credit use:** 1 call credit per 100 candles returned (rounded up). A request that returns no candles costs 0 credits.
+	// **CMC equivalent pages:** Our historical cryptocurrency data pages like [coinmarketcap.com/currencies/bitcoin/historical-data/](https://coinmarketcap.com/currencies/bitcoin/historical-data/).
+	//
+	// Corresponds with GET /v5/cryptocurrency/ohlcv/historical (the `GetV5CryptocurrencyOhlcvHistorical` operationId).
+	GetV5CryptocurrencyOhlcvHistorical(ctx context.Context, params *GetV5CryptocurrencyOhlcvHistoricalParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetV5DerivativesLiquidationsCryptocurrencyListLatest Latest Liquidations by Cryptocurrency
 	//
 	// Returns a paginated, sorted list of cryptocurrencies, each with its perpetual and futures liquidation values over rolling 1-hour, 4-hour, and 24-hour windows, aggregated across every exchange that trades its derivatives. This is the per-coin leaderboard shown on the [CoinMarketCap liquidations chart](https://coinmarketcap.com/charts/liquidations/). When you call it without any filters, it returns every tracked cryptocurrency sorted by `total_liquidations_24h` in descending order.
@@ -16138,6 +16667,53 @@ type ClientInterface interface {
 	//
 	// Corresponds with GET /v5/real-world-assets/market-pairs/list (the `GetV5RealWorldAssetsMarketPairsList` operationId).
 	GetV5RealWorldAssetsMarketPairsList(ctx context.Context, params *GetV5RealWorldAssetsMarketPairsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetV5RealWorldAssetsQuotesHistorical Quotes Historical
+	//
+	// Returns a time series of tokenized aggregate values for one or more Real-World Asset (RWA) assets: the average tokenized price, tokenized market cap and 24h tokenized volume, with one data point per interval period. For the current values, use [/v5/real-world-assets/quotes/latest](/pro-api-reference/real-world-assets#quotes-latest-5). For the history of one underlying token, call [/v3/cryptocurrency/quotes/historical](/pro-api-reference/cryptocurrency#quotes-historical) with the token's `crypto_id`.
+	//
+	// At least one of `rwa_id`, `rwa_slug`, or `symbol` is required, and only one identifier type may be used per request. Assets are returned in the order requested. Each asset's `quotes` array is flat: one entry per data point per convert currency, tagged with `convert_id` and `convert_symbol`, oldest first and grouped by currency in the order requested. An asset with `has_tokens: false` returns an empty `quotes` array.
+	//
+	// **Time window**
+	//
+	// `time_start` and `time_end` are inclusive, and both are rounded down to the start of their interval period. The window depends on which parameters you send:
+	//
+	// - Neither `time_start` nor `time_end`: the `count` most recent periods.
+	// - `time_end` only: `count` periods ending with the period that contains `time_end`.
+	// - `time_start` only: `count` periods starting at `time_start`.
+	// - `time_start` and `time_end`: every period in the range. If you also send `count`, the first `count` periods from `time_start`.
+	//
+	// `count` defaults to 10 unless you send both `time_start` and `time_end`. It counts interval periods, not data points: a period with no data is skipped, so fewer data points can come back.
+	//
+	// **Data points**
+	//
+	// Each data point is the first value recorded in its period, stamped at the start of the period. Daily and longer periods start at 00:00 UTC for commodities, and at midnight New York time (04:00 or 05:00 UTC) for stocks and ETFs. `weekly` periods start on Monday and `monthly` periods on the 1st.
+	//
+	// **Limits**
+	//
+	// - History starts no earlier than January 1, 2020. A range that starts earlier returns data from the first available data point, with no notice.
+	// - One request returns at most 10,000 data points, counted as the number of assets times the number of periods in the range. A larger request returns `400`.
+	// - `hourly` and `1h` to `12h` reach back at most 100 days, and `5m` to `45m` at most 10 days. Lower plans reach back less, as listed below. A request beyond your plan's window returns `403` with error code `1014`.
+	// - Up to 3 `convert` or `convert_id` values per request.
+	//
+	// How far back you can go depends on your plan and the interval.
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic (hourly: 1 month, daily: 1 year)
+	//   - Builder (hourly: 1 month, daily: 3 years)
+	//   - Startup (hourly: 1 month, daily: from 2020)
+	//   - Growth (hourly: 3 months, daily: from 2020)
+	//   - Professional (hourly: 100 days, daily: from 2020)
+	//   - Enterprise (hourly: 100 days, daily: from 2020, `5m` to `45m`: 10 days)
+	//
+	// **Note:** Hourly = `hourly` and `1h` to `12h` intervals, Daily = `daily`, `weekly`, `monthly`, `yearly` and `1d` to `365d` intervals. The `5m` to `45m` intervals are available on Enterprise only.
+	//
+	// **Cache / Update frequency:** Every 5 minutes.
+	// **Plan credit use:** 1 call credit per 100 data points returned (rounded up), counted across all requested assets, plus 1 credit per `convert`/`convert_id` beyond the first. A request that returns no data points costs 0 credits.
+	// **CMC equivalent pages:** The price chart on RWA asset pages like [coinmarketcap.com/real-world-assets/nvidia/](https://coinmarketcap.com/real-world-assets/nvidia/).
+	//
+	// Corresponds with GET /v5/real-world-assets/quotes/historical (the `GetV5RealWorldAssetsQuotesHistorical` operationId).
+	GetV5RealWorldAssetsQuotesHistorical(ctx context.Context, params *GetV5RealWorldAssetsQuotesHistoricalParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetV5RealWorldAssetsQuotesLatest Quotes Latest
 	//
@@ -16467,7 +17043,7 @@ func (c *Client) GetV1CryptocurrencyAirdrops(ctx context.Context, params *GetV1C
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/cryptocurrency/categories`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Data is updated only as needed, every 30 seconds.
+// **Cache / Update frequency:** Every 5 to 15 minutes.
 // **Plan credit use:** 1 API call credit per request + 1 call credit per 200 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our free airdrops page [coinmarketcap.com/cryptocurrency-category/](https://coinmarketcap.com/cryptocurrency-category/).
 //
@@ -16498,7 +17074,7 @@ func (c *Client) GetV1CryptocurrencyCategories(ctx context.Context, params *GetV
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/cryptocurrency/category`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Data is updated only as needed, every 30 seconds.
+// **Cache / Update frequency:** Every 15 seconds for cryptocurrency quotes, and every 5 to 15 minutes for category statistics.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our Cryptocurrency Category page [coinmarketcap.com/cryptocurrency-category/](https://coinmarketcap.com/cryptocurrency-category/).
 //
@@ -16655,7 +17231,7 @@ func (c *Client) GetV1CryptocurrencyListingsLatest(ctx context.Context, params *
 //	- Professional
 //	- Enterprise
 //
-// **Cache / Update frequency:** Every 60 seconds.
+// **Cache / Update frequency:** Every 15 seconds for quotes. Newly added cryptocurrencies usually appear in the list within 10 minutes.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our "new" cryptocurrency page [coinmarketcap.com/new/](https://coinmarketcap.com/new)
 //
@@ -16985,7 +17561,7 @@ func (c *Client) GetV1CryptocurrencyQuotesLatest(ctx context.Context, params *Ge
 //   - Professional
 //   - Enterprise
 //
-// **Cache / Update frequency:** Every 10 minutes.
+// **Cache / Update frequency:** Every 60 seconds for the list, and every 15 to 25 seconds for quotes.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our cryptocurrency Gainers & Losers page [coinmarketcap.com/gainers-losers/](https://coinmarketcap.com/gainers-losers/).
 //
@@ -17012,7 +17588,7 @@ func (c *Client) GetV1CryptocurrencyTrendingGainerslosers(ctx context.Context, p
 //	- Professional
 //	- Enterprise
 //
-// **Cache / Update frequency:** Every 10 minutes.
+// **Cache / Update frequency:** Every 10 minutes for the list (every 12 hours for the 30d list), and every 15 to 25 seconds for quotes. The default first page (`start=1`, `limit=100`, USD) can be up to 10 minutes old.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our cryptocurrency Trending page [coinmarketcap.com/trending-cryptocurrencies/](https://coinmarketcap.com/trending-cryptocurrencies/).
 //
@@ -17039,7 +17615,7 @@ func (c *Client) GetV1CryptocurrencyTrendingLatest(ctx context.Context, params *
 //	- Professional
 //	- Enterprise
 //
-// **Cache / Update frequency:** Every 24 hours.
+// **Cache / Update frequency:** Every 4 hours for the list, and every 15 to 25 seconds for quotes.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** The CoinMarketCap “Most Visited” trending list. [coinmarketcap.com/most-viewed-pages/](https://coinmarketcap.com/most-viewed-pages/).
 //
@@ -18522,11 +19098,13 @@ func (c *Client) GetV2CryptocurrencyMarketpairsLatest(ctx context.Context, param
 	return c.Client.Do(req)
 }
 
-// GetV2CryptocurrencyOhlcvHistorical OHLCV Historical
+// GetV2CryptocurrencyOhlcvHistorical OHLCV Historical v2 (deprecated)
+//
+// **Deprecated.** Use [/v5/cryptocurrency/ohlcv/historical](/pro-api-reference/cryptocurrency#ohlcv-historical) instead. It returns the same candles as compact rows, one cryptocurrency per request, with calendar-week (`1w`) and calendar-month (`1M`) intervals and a simpler time window.
 //
 // Returns historical OHLCV (Open, High, Low, Close, Volume) data along with market cap for any cryptocurrency using time interval parameters. Currently daily and hourly OHLCV periods are supported. Volume is not currently supported for hourly OHLCV intervals before 2020-09-22.
 //
-// **Please note**: This documentation relates to our updated V2 endpoint, which may be incompatible with our V1 versions. Documentation for deprecated endpoints can be found [the deprecated section](/pro-api-reference/deprecated).
+// **Please note**: This documentation relates to our updated V2 endpoint, which may be incompatible with our earlier versions. Documentation for deprecated endpoints can be found [the deprecated section](/pro-api-reference/deprecated).
 //
 // **Technical Notes**
 // - Only the date portion of the timestamp is used for daily OHLCV so it's recommended to send an ISO date format like "2018-09-19" without time for this "time_period".
@@ -18598,7 +19176,7 @@ func (c *Client) GetV2CryptocurrencyOhlcvHistorical(ctx context.Context, params 
 //	- Professional
 //	- Enterprise
 //
-//	**Cache / Update frequency:** Every 10 minutes. Additional OHLCV intervals and 1 minute updates will be available in the future.
+//	**Cache / Update frequency:** Every 15 to 25 seconds for `close`, and every 5 to 7 minutes for `open`, `high`, `low`, and `volume`. Additional OHLCV intervals and 1 minute updates will be available in the future.
 //	**Plan credit use:** 1 call credit per 250 OHLCV values returned (rounded up) and 1 call credit per `convert` option beyond the first.
 //	**CMC equivalent pages:** No equivalent, this data is only available via API.
 //
@@ -18779,7 +19357,7 @@ func (c *Client) GetV2DexMultiplier(ctx context.Context, params *GetV2DexMultipl
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v2/simple/price`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Every 60 seconds.
+// **Cache / Update frequency:** Every 15 to 25 seconds.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up), plus 1 credit per `convert` / `convert_id` option beyond the first. The `include_*` flags do not add credits.
 //
 // Corresponds with GET /v2/simple/price (the `GetV2SimplePrice` operationId).
@@ -18867,7 +19445,7 @@ func (c *Client) GetV2ToolsPriceconversion(ctx context.Context, params *GetV2Too
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v3/cryptocurrency/listings/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Every 60 seconds.
+// **Cache / Update frequency:** Every 15 seconds.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per \`convert\` option beyond the first.
 // **CMC equivalent pages:** Our latest cryptocurrency listing and ranking pages like [coinmarketcap.com/all/views/all/](https://coinmarketcap.com/all/views/all/), [coinmarketcap.com/tokens/](https://coinmarketcap.com/tokens/), [coinmarketcap.com/gainers-losers/](https://coinmarketcap.com/gainers-losers/), [coinmarketcap.com/new/](https://coinmarketcap.com/new/).
 //
@@ -18961,7 +19539,7 @@ func (c *Client) GetV3CryptocurrencyQuotesHistorical(ctx context.Context, params
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v3/cryptocurrency/quotes/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Every 60 seconds.
+// **Cache / Update frequency:** Every 15 to 25 seconds.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per \`convert\` option beyond the first.
 // **CMC equivalent pages:** Latest market data pages for specific cryptocurrencies like [coinmarketcap.com/currencies/bitcoin/](https://coinmarketcap.com/currencies/bitcoin/).
 //
@@ -19475,6 +20053,75 @@ func (c *Client) GetV5CryptocurrencyDerivativesMarketPairsListLatest(ctx context
 	return c.Client.Do(req)
 }
 
+// GetV5CryptocurrencyOhlcvHistorical OHLCV Historical
+//
+// Returns historical OHLCV (open, high, low, close, volume) candles for one cryptocurrency, together with the market cap and the times of the high and the low in each candle. Each candle is a compact row of 10 values instead of a nested object, so long histories stay small and load straight into charting and analysis tools.
+//
+// Compared with the deprecated [/v2/cryptocurrency/ohlcv/historical](/pro-api-reference/deprecated#ohlcv-historical-v2-deprecated), this endpoint:
+//
+// - returns one cryptocurrency per request, by `id` or `slug`, in one currency set with `convert_id`.
+// - uses the interval names `15m`, `1h`, `4h`, `1d`, `1w` and `1M`. `1w` is a calendar week starting on Monday and `1M` is a calendar month.
+// - uses `time_start` and `count` when you send `time_start`, `time_end` and `count` together, instead of working out `count` from the time range.
+// - rejects parameters it does not support, such as `symbol`, `convert`, `time_period` and `skip_invalid`, with a `400` error instead of ignoring them.
+//
+// **Candle rows**
+//
+// `data` is an array of candles, oldest first. Each candle is an array of 10 values in this fixed order, so read the values by position:
+//
+// | Index | Field | Type | Description |
+// | --- | --- | --- | --- |
+// | 0 | `openPrice` | number | Open price: the first price in the period. |
+// | 1 | `highPrice` | number | High price: the highest price in the period. |
+// | 2 | `lowPrice` | number | Low price: the lowest price in the period. |
+// | 3 | `closePrice` | number | Close price: the last price in the period. |
+// | 4 | `volume` | number | Trading volume in the period. |
+// | 5 | `marketcap` | number | Market cap at the close of the period. |
+// | 6 | `openTime` | string | Start of the period (ISO 8601, UTC). |
+// | 7 | `highTime` | string | Time of the high price (ISO 8601, UTC). |
+// | 8 | `lowTime` | string | Time of the low price (ISO 8601, UTC). |
+// | 9 | `closeTime` | string | End of the period (ISO 8601, UTC), for example `2025-01-02T23:59:59.999Z`. |
+//
+// Prices, volume and market cap are in the currency set by `convert_id`. A value that is not available is returned as `null` in its position. Periods with no data, future periods and the period that is still open are left out, so a request with no data returns an empty `data` array.
+//
+// **Time window**
+//
+// `time_start` and `time_end` are inclusive, and both are rounded down to the start of their interval period in UTC. The window depends on which parameters you send:
+//
+// - `time_start` and `time_end`: every period in the range, up to 10000 periods.
+// - `time_start` and `count`: `count` periods starting at `time_start`.
+// - `time_end` and `count`: `count` periods ending with the period that contains `time_end`.
+// - `time_start`, `time_end` and `count`: `count` periods starting at `time_start`. `time_end` must still be a valid timestamp, but it does not change the window.
+// - Neither `time_start` nor `time_end`: the `count` most recent completed periods.
+//
+// `count` defaults to 10 when you do not send both `time_start` and `time_end`.
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- ~~Basic~~
+//	- ~~Builder~~
+//	- Startup (intraday: 1 month, daily: from 2010)
+//	- Growth (intraday: 3 months, daily: from 2010)
+//	- Professional (intraday: 12 months, daily: from 2010)
+//	- Enterprise (intraday: from 2010, daily: from 2010)
+//
+// **Note:** Intraday = `15m`, `1h` and `4h` intervals, Daily = `1d`, `1w` and `1M` intervals
+//
+// **Cache / Update frequency:** Each candle is returned once its period has closed.
+// **Plan credit use:** 1 call credit per 100 candles returned (rounded up). A request that returns no candles costs 0 credits.
+// **CMC equivalent pages:** Our historical cryptocurrency data pages like [coinmarketcap.com/currencies/bitcoin/historical-data/](https://coinmarketcap.com/currencies/bitcoin/historical-data/).
+//
+// Corresponds with GET /v5/cryptocurrency/ohlcv/historical (the `GetV5CryptocurrencyOhlcvHistorical` operationId).
+func (c *Client) GetV5CryptocurrencyOhlcvHistorical(ctx context.Context, params *GetV5CryptocurrencyOhlcvHistoricalParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetV5CryptocurrencyOhlcvHistoricalRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // GetV5DerivativesLiquidationsCryptocurrencyListLatest Latest Liquidations by Cryptocurrency
 //
 // Returns a paginated, sorted list of cryptocurrencies, each with its perpetual and futures liquidation values over rolling 1-hour, 4-hour, and 24-hour windows, aggregated across every exchange that trades its derivatives. This is the per-coin leaderboard shown on the [CoinMarketCap liquidations chart](https://coinmarketcap.com/charts/liquidations/). When you call it without any filters, it returns every tracked cryptocurrency sorted by `total_liquidations_24h` in descending order.
@@ -19792,6 +20439,63 @@ func (c *Client) GetV5RealWorldAssetsMap(ctx context.Context, params *GetV5RealW
 // Corresponds with GET /v5/real-world-assets/market-pairs/list (the `GetV5RealWorldAssetsMarketPairsList` operationId).
 func (c *Client) GetV5RealWorldAssetsMarketPairsList(ctx context.Context, params *GetV5RealWorldAssetsMarketPairsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetV5RealWorldAssetsMarketPairsListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetV5RealWorldAssetsQuotesHistorical Quotes Historical
+//
+// Returns a time series of tokenized aggregate values for one or more Real-World Asset (RWA) assets: the average tokenized price, tokenized market cap and 24h tokenized volume, with one data point per interval period. For the current values, use [/v5/real-world-assets/quotes/latest](/pro-api-reference/real-world-assets#quotes-latest-5). For the history of one underlying token, call [/v3/cryptocurrency/quotes/historical](/pro-api-reference/cryptocurrency#quotes-historical) with the token's `crypto_id`.
+//
+// At least one of `rwa_id`, `rwa_slug`, or `symbol` is required, and only one identifier type may be used per request. Assets are returned in the order requested. Each asset's `quotes` array is flat: one entry per data point per convert currency, tagged with `convert_id` and `convert_symbol`, oldest first and grouped by currency in the order requested. An asset with `has_tokens: false` returns an empty `quotes` array.
+//
+// **Time window**
+//
+// `time_start` and `time_end` are inclusive, and both are rounded down to the start of their interval period. The window depends on which parameters you send:
+//
+// - Neither `time_start` nor `time_end`: the `count` most recent periods.
+// - `time_end` only: `count` periods ending with the period that contains `time_end`.
+// - `time_start` only: `count` periods starting at `time_start`.
+// - `time_start` and `time_end`: every period in the range. If you also send `count`, the first `count` periods from `time_start`.
+//
+// `count` defaults to 10 unless you send both `time_start` and `time_end`. It counts interval periods, not data points: a period with no data is skipped, so fewer data points can come back.
+//
+// **Data points**
+//
+// Each data point is the first value recorded in its period, stamped at the start of the period. Daily and longer periods start at 00:00 UTC for commodities, and at midnight New York time (04:00 or 05:00 UTC) for stocks and ETFs. `weekly` periods start on Monday and `monthly` periods on the 1st.
+//
+// **Limits**
+//
+// - History starts no earlier than January 1, 2020. A range that starts earlier returns data from the first available data point, with no notice.
+// - One request returns at most 10,000 data points, counted as the number of assets times the number of periods in the range. A larger request returns `400`.
+// - `hourly` and `1h` to `12h` reach back at most 100 days, and `5m` to `45m` at most 10 days. Lower plans reach back less, as listed below. A request beyond your plan's window returns `403` with error code `1014`.
+// - Up to 3 `convert` or `convert_id` values per request.
+//
+// How far back you can go depends on your plan and the interval.
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic (hourly: 1 month, daily: 1 year)
+//	- Builder (hourly: 1 month, daily: 3 years)
+//	- Startup (hourly: 1 month, daily: from 2020)
+//	- Growth (hourly: 3 months, daily: from 2020)
+//	- Professional (hourly: 100 days, daily: from 2020)
+//	- Enterprise (hourly: 100 days, daily: from 2020, `5m` to `45m`: 10 days)
+//
+// **Note:** Hourly = `hourly` and `1h` to `12h` intervals, Daily = `daily`, `weekly`, `monthly`, `yearly` and `1d` to `365d` intervals. The `5m` to `45m` intervals are available on Enterprise only.
+//
+// **Cache / Update frequency:** Every 5 minutes.
+// **Plan credit use:** 1 call credit per 100 data points returned (rounded up), counted across all requested assets, plus 1 credit per `convert`/`convert_id` beyond the first. A request that returns no data points costs 0 credits.
+// **CMC equivalent pages:** The price chart on RWA asset pages like [coinmarketcap.com/real-world-assets/nvidia/](https://coinmarketcap.com/real-world-assets/nvidia/).
+//
+// Corresponds with GET /v5/real-world-assets/quotes/historical (the `GetV5RealWorldAssetsQuotesHistorical` operationId).
+func (c *Client) GetV5RealWorldAssetsQuotesHistorical(ctx context.Context, params *GetV5RealWorldAssetsQuotesHistoricalParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetV5RealWorldAssetsQuotesHistoricalRequest(c.Server, params)
 	if err != nil {
 		return nil, err
 	}
@@ -30453,6 +31157,128 @@ func NewGetV5CryptocurrencyDerivativesMarketPairsListLatestRequest(server string
 	return req, nil
 }
 
+// NewGetV5CryptocurrencyOhlcvHistoricalRequest constructs an http.Request for the GetV5CryptocurrencyOhlcvHistorical method
+func NewGetV5CryptocurrencyOhlcvHistoricalRequest(server string, params *GetV5CryptocurrencyOhlcvHistoricalParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v5/cryptocurrency/ohlcv/historical")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.ID != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "id", *params.ID, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Slug != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "slug", *params.Slug, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "interval", params.Interval, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if params.TimeStart != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "time_start", *params.TimeStart, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.TimeEnd != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "time_end", *params.TimeEnd, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Count != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "count", *params.Count, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ConvertID != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "convert_id", *params.ConvertID, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewGetV5DerivativesLiquidationsCryptocurrencyListLatestRequest constructs an http.Request for the GetV5DerivativesLiquidationsCryptocurrencyListLatest method
 func NewGetV5DerivativesLiquidationsCryptocurrencyListLatestRequest(server string, params *GetV5DerivativesLiquidationsCryptocurrencyListLatestParams) (*http.Request, error) {
 	var err error
@@ -31823,6 +32649,168 @@ func NewGetV5RealWorldAssetsMarketPairsListRequest(server string, params *GetV5R
 	return req, nil
 }
 
+// NewGetV5RealWorldAssetsQuotesHistoricalRequest constructs an http.Request for the GetV5RealWorldAssetsQuotesHistorical method
+func NewGetV5RealWorldAssetsQuotesHistoricalRequest(server string, params *GetV5RealWorldAssetsQuotesHistoricalParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v5/real-world-assets/quotes/historical")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.RwaID != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "rwa_id", *params.RwaID, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.RwaSlug != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "rwa_slug", *params.RwaSlug, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Symbol != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "symbol", *params.Symbol, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.TimeStart != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "time_start", *params.TimeStart, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.TimeEnd != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "time_end", *params.TimeEnd, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Count != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "count", *params.Count, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Interval != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "interval", *params.Interval, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Convert != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "convert", *params.Convert, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.ConvertID != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "convert_id", *params.ConvertID, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.SkipInvalid != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "skip_invalid", *params.SkipInvalid, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewGetV5RealWorldAssetsQuotesLatestRequest constructs an http.Request for the GetV5RealWorldAssetsQuotesLatest method
 func NewGetV5RealWorldAssetsQuotesLatestRequest(server string, params *GetV5RealWorldAssetsQuotesLatestParams) (*http.Request, error) {
 	var err error
@@ -32210,7 +33198,7 @@ type ClientWithResponsesInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/cryptocurrency/categories`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Data is updated only as needed, every 30 seconds.
+	// **Cache / Update frequency:** Every 5 to 15 minutes.
 	// **Plan credit use:** 1 API call credit per request + 1 call credit per 200 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our free airdrops page [coinmarketcap.com/cryptocurrency-category/](https://coinmarketcap.com/cryptocurrency-category/).
 	//
@@ -32233,7 +33221,7 @@ type ClientWithResponsesInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/cryptocurrency/category`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Data is updated only as needed, every 30 seconds.
+	// **Cache / Update frequency:** Every 15 seconds for cryptocurrency quotes, and every 5 to 15 minutes for category statistics.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our Cryptocurrency Category page [coinmarketcap.com/cryptocurrency-category/](https://coinmarketcap.com/cryptocurrency-category/).
 	//
@@ -32363,7 +33351,7 @@ type ClientWithResponsesInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	// **Cache / Update frequency:** Every 60 seconds.
+	// **Cache / Update frequency:** Every 15 seconds for quotes. Newly added cryptocurrencies usually appear in the list within 10 minutes.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our "new" cryptocurrency page [coinmarketcap.com/new/](https://coinmarketcap.com/new)
 	//
@@ -32630,7 +33618,7 @@ type ClientWithResponsesInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	// **Cache / Update frequency:** Every 10 minutes.
+	// **Cache / Update frequency:** Every 60 seconds for the list, and every 15 to 25 seconds for quotes.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our cryptocurrency Gainers & Losers page [coinmarketcap.com/gainers-losers/](https://coinmarketcap.com/gainers-losers/).
 	//
@@ -32651,7 +33639,7 @@ type ClientWithResponsesInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	// **Cache / Update frequency:** Every 10 minutes.
+	// **Cache / Update frequency:** Every 10 minutes for the list (every 12 hours for the 30d list), and every 15 to 25 seconds for quotes. The default first page (`start=1`, `limit=100`, USD) can be up to 10 minutes old.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** Our cryptocurrency Trending page [coinmarketcap.com/trending-cryptocurrencies/](https://coinmarketcap.com/trending-cryptocurrencies/).
 	//
@@ -32672,7 +33660,7 @@ type ClientWithResponsesInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	// **Cache / Update frequency:** Every 24 hours.
+	// **Cache / Update frequency:** Every 4 hours for the list, and every 15 to 25 seconds for quotes.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	// **CMC equivalent pages:** The CoinMarketCap “Most Visited” trending list. [coinmarketcap.com/most-viewed-pages/](https://coinmarketcap.com/most-viewed-pages/).
 	//
@@ -33726,11 +34714,13 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /v2/cryptocurrency/market-pairs/latest (the `GetV2CryptocurrencyMarketpairsLatest` operationId).
 	GetV2CryptocurrencyMarketpairsLatestWithResponse(ctx context.Context, params *GetV2CryptocurrencyMarketpairsLatestParams, reqEditors ...RequestEditorFn) (*GetV2CryptocurrencyMarketpairsLatestResponse, error)
 
-	// GetV2CryptocurrencyOhlcvHistoricalWithResponse OHLCV Historical
+	// GetV2CryptocurrencyOhlcvHistoricalWithResponse OHLCV Historical v2 (deprecated)
+	//
+	// **Deprecated.** Use [/v5/cryptocurrency/ohlcv/historical](/pro-api-reference/cryptocurrency#ohlcv-historical) instead. It returns the same candles as compact rows, one cryptocurrency per request, with calendar-week (`1w`) and calendar-month (`1M`) intervals and a simpler time window.
 	//
 	// Returns historical OHLCV (Open, High, Low, Close, Volume) data along with market cap for any cryptocurrency using time interval parameters. Currently daily and hourly OHLCV periods are supported. Volume is not currently supported for hourly OHLCV intervals before 2020-09-22.
 	//
-	// **Please note**: This documentation relates to our updated V2 endpoint, which may be incompatible with our V1 versions. Documentation for deprecated endpoints can be found [the deprecated section](/pro-api-reference/deprecated).
+	// **Please note**: This documentation relates to our updated V2 endpoint, which may be incompatible with our earlier versions. Documentation for deprecated endpoints can be found [the deprecated section](/pro-api-reference/deprecated).
 	//
 	//
 	// **Technical Notes**
@@ -33796,7 +34786,7 @@ type ClientWithResponsesInterface interface {
 	//   - Professional
 	//   - Enterprise
 	//
-	//   **Cache / Update frequency:** Every 10 minutes. Additional OHLCV intervals and 1 minute updates will be available in the future.
+	//   **Cache / Update frequency:** Every 15 to 25 seconds for `close`, and every 5 to 7 minutes for `open`, `high`, `low`, and `volume`. Additional OHLCV intervals and 1 minute updates will be available in the future.
 	//   **Plan credit use:** 1 call credit per 250 OHLCV values returned (rounded up) and 1 call credit per `convert` option beyond the first.
 	//   **CMC equivalent pages:** No equivalent, this data is only available via API.
 	//
@@ -33941,7 +34931,7 @@ type ClientWithResponsesInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v2/simple/price`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Every 60 seconds.
+	// **Cache / Update frequency:** Every 15 to 25 seconds.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up), plus 1 credit per `convert` / `convert_id` option beyond the first. The `include_*` flags do not add credits.
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -34015,7 +35005,7 @@ type ClientWithResponsesInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v3/cryptocurrency/listings/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Every 60 seconds.
+	// **Cache / Update frequency:** Every 15 seconds.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per \`convert\` option beyond the first.
 	// **CMC equivalent pages:** Our latest cryptocurrency listing and ranking pages like [coinmarketcap.com/all/views/all/](https://coinmarketcap.com/all/views/all/), [coinmarketcap.com/tokens/](https://coinmarketcap.com/tokens/), [coinmarketcap.com/gainers-losers/](https://coinmarketcap.com/gainers-losers/), [coinmarketcap.com/new/](https://coinmarketcap.com/new/).
 	//
@@ -34095,7 +35085,7 @@ type ClientWithResponsesInterface interface {
 	//
 	// <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v3/cryptocurrency/quotes/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 	//
-	// **Cache / Update frequency:** Every 60 seconds.
+	// **Cache / Update frequency:** Every 15 to 25 seconds.
 	// **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per \`convert\` option beyond the first.
 	// **CMC equivalent pages:** Latest market data pages for specific cryptocurrencies like [coinmarketcap.com/currencies/bitcoin/](https://coinmarketcap.com/currencies/bitcoin/).
 	//
@@ -34469,6 +35459,67 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /v5/cryptocurrency/derivatives/market-pairs/list/latest (the `GetV5CryptocurrencyDerivativesMarketPairsListLatest` operationId).
 	GetV5CryptocurrencyDerivativesMarketPairsListLatestWithResponse(ctx context.Context, params *GetV5CryptocurrencyDerivativesMarketPairsListLatestParams, reqEditors ...RequestEditorFn) (*GetV5CryptocurrencyDerivativesMarketPairsListLatestResponse, error)
 
+	// GetV5CryptocurrencyOhlcvHistoricalWithResponse OHLCV Historical
+	//
+	// Returns historical OHLCV (open, high, low, close, volume) candles for one cryptocurrency, together with the market cap and the times of the high and the low in each candle. Each candle is a compact row of 10 values instead of a nested object, so long histories stay small and load straight into charting and analysis tools.
+	//
+	// Compared with the deprecated [/v2/cryptocurrency/ohlcv/historical](/pro-api-reference/deprecated#ohlcv-historical-v2-deprecated), this endpoint:
+	//
+	// - returns one cryptocurrency per request, by `id` or `slug`, in one currency set with `convert_id`.
+	// - uses the interval names `15m`, `1h`, `4h`, `1d`, `1w` and `1M`. `1w` is a calendar week starting on Monday and `1M` is a calendar month.
+	// - uses `time_start` and `count` when you send `time_start`, `time_end` and `count` together, instead of working out `count` from the time range.
+	// - rejects parameters it does not support, such as `symbol`, `convert`, `time_period` and `skip_invalid`, with a `400` error instead of ignoring them.
+	//
+	// **Candle rows**
+	//
+	// `data` is an array of candles, oldest first. Each candle is an array of 10 values in this fixed order, so read the values by position:
+	//
+	// | Index | Field | Type | Description |
+	// | --- | --- | --- | --- |
+	// | 0 | `openPrice` | number | Open price: the first price in the period. |
+	// | 1 | `highPrice` | number | High price: the highest price in the period. |
+	// | 2 | `lowPrice` | number | Low price: the lowest price in the period. |
+	// | 3 | `closePrice` | number | Close price: the last price in the period. |
+	// | 4 | `volume` | number | Trading volume in the period. |
+	// | 5 | `marketcap` | number | Market cap at the close of the period. |
+	// | 6 | `openTime` | string | Start of the period (ISO 8601, UTC). |
+	// | 7 | `highTime` | string | Time of the high price (ISO 8601, UTC). |
+	// | 8 | `lowTime` | string | Time of the low price (ISO 8601, UTC). |
+	// | 9 | `closeTime` | string | End of the period (ISO 8601, UTC), for example `2025-01-02T23:59:59.999Z`. |
+	//
+	// Prices, volume and market cap are in the currency set by `convert_id`. A value that is not available is returned as `null` in its position. Periods with no data, future periods and the period that is still open are left out, so a request with no data returns an empty `data` array.
+	//
+	// **Time window**
+	//
+	// `time_start` and `time_end` are inclusive, and both are rounded down to the start of their interval period in UTC. The window depends on which parameters you send:
+	//
+	// - `time_start` and `time_end`: every period in the range, up to 10000 periods.
+	// - `time_start` and `count`: `count` periods starting at `time_start`.
+	// - `time_end` and `count`: `count` periods ending with the period that contains `time_end`.
+	// - `time_start`, `time_end` and `count`: `count` periods starting at `time_start`. `time_end` must still be a valid timestamp, but it does not change the window.
+	// - Neither `time_start` nor `time_end`: the `count` most recent completed periods.
+	//
+	// `count` defaults to 10 when you do not send both `time_start` and `time_end`.
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - ~~Basic~~
+	//   - ~~Builder~~
+	//   - Startup (intraday: 1 month, daily: from 2010)
+	//   - Growth (intraday: 3 months, daily: from 2010)
+	//   - Professional (intraday: 12 months, daily: from 2010)
+	//   - Enterprise (intraday: from 2010, daily: from 2010)
+	//
+	// **Note:** Intraday = `15m`, `1h` and `4h` intervals, Daily = `1d`, `1w` and `1M` intervals
+	//
+	// **Cache / Update frequency:** Each candle is returned once its period has closed.
+	// **Plan credit use:** 1 call credit per 100 candles returned (rounded up). A request that returns no candles costs 0 credits.
+	// **CMC equivalent pages:** Our historical cryptocurrency data pages like [coinmarketcap.com/currencies/bitcoin/historical-data/](https://coinmarketcap.com/currencies/bitcoin/historical-data/).
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v5/cryptocurrency/ohlcv/historical (the `GetV5CryptocurrencyOhlcvHistorical` operationId).
+	GetV5CryptocurrencyOhlcvHistoricalWithResponse(ctx context.Context, params *GetV5CryptocurrencyOhlcvHistoricalParams, reqEditors ...RequestEditorFn) (*GetV5CryptocurrencyOhlcvHistoricalResponse, error)
+
 	// GetV5DerivativesLiquidationsCryptocurrencyListLatestWithResponse Latest Liquidations by Cryptocurrency
 	//
 	// Returns a paginated, sorted list of cryptocurrencies, each with its perpetual and futures liquidation values over rolling 1-hour, 4-hour, and 24-hour windows, aggregated across every exchange that trades its derivatives. This is the per-coin leaderboard shown on the [CoinMarketCap liquidations chart](https://coinmarketcap.com/charts/liquidations/). When you call it without any filters, it returns every tracked cryptocurrency sorted by `total_liquidations_24h` in descending order.
@@ -34707,6 +35758,55 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with GET /v5/real-world-assets/market-pairs/list (the `GetV5RealWorldAssetsMarketPairsList` operationId).
 	GetV5RealWorldAssetsMarketPairsListWithResponse(ctx context.Context, params *GetV5RealWorldAssetsMarketPairsListParams, reqEditors ...RequestEditorFn) (*GetV5RealWorldAssetsMarketPairsListResponse, error)
+
+	// GetV5RealWorldAssetsQuotesHistoricalWithResponse Quotes Historical
+	//
+	// Returns a time series of tokenized aggregate values for one or more Real-World Asset (RWA) assets: the average tokenized price, tokenized market cap and 24h tokenized volume, with one data point per interval period. For the current values, use [/v5/real-world-assets/quotes/latest](/pro-api-reference/real-world-assets#quotes-latest-5). For the history of one underlying token, call [/v3/cryptocurrency/quotes/historical](/pro-api-reference/cryptocurrency#quotes-historical) with the token's `crypto_id`.
+	//
+	// At least one of `rwa_id`, `rwa_slug`, or `symbol` is required, and only one identifier type may be used per request. Assets are returned in the order requested. Each asset's `quotes` array is flat: one entry per data point per convert currency, tagged with `convert_id` and `convert_symbol`, oldest first and grouped by currency in the order requested. An asset with `has_tokens: false` returns an empty `quotes` array.
+	//
+	// **Time window**
+	//
+	// `time_start` and `time_end` are inclusive, and both are rounded down to the start of their interval period. The window depends on which parameters you send:
+	//
+	// - Neither `time_start` nor `time_end`: the `count` most recent periods.
+	// - `time_end` only: `count` periods ending with the period that contains `time_end`.
+	// - `time_start` only: `count` periods starting at `time_start`.
+	// - `time_start` and `time_end`: every period in the range. If you also send `count`, the first `count` periods from `time_start`.
+	//
+	// `count` defaults to 10 unless you send both `time_start` and `time_end`. It counts interval periods, not data points: a period with no data is skipped, so fewer data points can come back.
+	//
+	// **Data points**
+	//
+	// Each data point is the first value recorded in its period, stamped at the start of the period. Daily and longer periods start at 00:00 UTC for commodities, and at midnight New York time (04:00 or 05:00 UTC) for stocks and ETFs. `weekly` periods start on Monday and `monthly` periods on the 1st.
+	//
+	// **Limits**
+	//
+	// - History starts no earlier than January 1, 2020. A range that starts earlier returns data from the first available data point, with no notice.
+	// - One request returns at most 10,000 data points, counted as the number of assets times the number of periods in the range. A larger request returns `400`.
+	// - `hourly` and `1h` to `12h` reach back at most 100 days, and `5m` to `45m` at most 10 days. Lower plans reach back less, as listed below. A request beyond your plan's window returns `403` with error code `1014`.
+	// - Up to 3 `convert` or `convert_id` values per request.
+	//
+	// How far back you can go depends on your plan and the interval.
+	//
+	//   **This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+	//   - Basic (hourly: 1 month, daily: 1 year)
+	//   - Builder (hourly: 1 month, daily: 3 years)
+	//   - Startup (hourly: 1 month, daily: from 2020)
+	//   - Growth (hourly: 3 months, daily: from 2020)
+	//   - Professional (hourly: 100 days, daily: from 2020)
+	//   - Enterprise (hourly: 100 days, daily: from 2020, `5m` to `45m`: 10 days)
+	//
+	// **Note:** Hourly = `hourly` and `1h` to `12h` intervals, Daily = `daily`, `weekly`, `monthly`, `yearly` and `1d` to `365d` intervals. The `5m` to `45m` intervals are available on Enterprise only.
+	//
+	// **Cache / Update frequency:** Every 5 minutes.
+	// **Plan credit use:** 1 call credit per 100 data points returned (rounded up), counted across all requested assets, plus 1 credit per `convert`/`convert_id` beyond the first. A request that returns no data points costs 0 credits.
+	// **CMC equivalent pages:** The price chart on RWA asset pages like [coinmarketcap.com/real-world-assets/nvidia/](https://coinmarketcap.com/real-world-assets/nvidia/).
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v5/real-world-assets/quotes/historical (the `GetV5RealWorldAssetsQuotesHistorical` operationId).
+	GetV5RealWorldAssetsQuotesHistoricalWithResponse(ctx context.Context, params *GetV5RealWorldAssetsQuotesHistoricalParams, reqEditors ...RequestEditorFn) (*GetV5RealWorldAssetsQuotesHistoricalResponse, error)
 
 	// GetV5RealWorldAssetsQuotesLatestWithResponse Quotes Latest
 	//
@@ -41022,6 +42122,82 @@ func (r GetV5CryptocurrencyDerivativesMarketPairsListLatestResponse) ContentType
 	return ""
 }
 
+type GetV5CryptocurrencyOhlcvHistoricalResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CryptocurrencyOHLCVHistoricalV5ResponseModel
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *HTTPStatus400ErrorObject
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *HTTPStatus401ErrorObject
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *HTTPStatus403ErrorObject
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *HTTPStatus429ErrorObject
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *HTTPStatus500ErrorObject
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) GetJSON200() *CryptocurrencyOHLCVHistoricalV5ResponseModel {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) GetJSON400() *HTTPStatus400ErrorObject {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) GetJSON401() *HTTPStatus401ErrorObject {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) GetJSON403() *HTTPStatus403ErrorObject {
+	return r.JSON403
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) GetJSON429() *HTTPStatus429ErrorObject {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) GetJSON500() *HTTPStatus500ErrorObject {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetV5CryptocurrencyOhlcvHistoricalResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type GetV5DerivativesLiquidationsCryptocurrencyListLatestResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -41858,6 +43034,82 @@ func (r GetV5RealWorldAssetsMarketPairsListResponse) ContentType() string {
 	return ""
 }
 
+type GetV5RealWorldAssetsQuotesHistoricalResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *RWAQuotesHistoricalResponseModel
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *HTTPStatus400ErrorObject
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *HTTPStatus401ErrorObject
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *HTTPStatus403ErrorObject
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *HTTPStatus429ErrorObject
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *HTTPStatus500ErrorObject
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) GetJSON200() *RWAQuotesHistoricalResponseModel {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) GetJSON400() *HTTPStatus400ErrorObject {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) GetJSON401() *HTTPStatus401ErrorObject {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) GetJSON403() *HTTPStatus403ErrorObject {
+	return r.JSON403
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) GetJSON429() *HTTPStatus429ErrorObject {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) GetJSON500() *HTTPStatus500ErrorObject {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetV5RealWorldAssetsQuotesHistoricalResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type GetV5RealWorldAssetsQuotesLatestResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -42221,7 +43473,7 @@ func (c *ClientWithResponses) GetV1CryptocurrencyAirdropsWithResponse(ctx contex
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/cryptocurrency/categories`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Data is updated only as needed, every 30 seconds.
+// **Cache / Update frequency:** Every 5 to 15 minutes.
 // **Plan credit use:** 1 API call credit per request + 1 call credit per 200 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our free airdrops page [coinmarketcap.com/cryptocurrency-category/](https://coinmarketcap.com/cryptocurrency-category/).
 //
@@ -42250,7 +43502,7 @@ func (c *ClientWithResponses) GetV1CryptocurrencyCategoriesWithResponse(ctx cont
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v1/cryptocurrency/category`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Data is updated only as needed, every 30 seconds.
+// **Cache / Update frequency:** Every 15 seconds for cryptocurrency quotes, and every 5 to 15 minutes for category statistics.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our Cryptocurrency Category page [coinmarketcap.com/cryptocurrency-category/](https://coinmarketcap.com/cryptocurrency-category/).
 //
@@ -42399,7 +43651,7 @@ func (c *ClientWithResponses) GetV1CryptocurrencyListingsLatestWithResponse(ctx 
 //	- Professional
 //	- Enterprise
 //
-// **Cache / Update frequency:** Every 60 seconds.
+// **Cache / Update frequency:** Every 15 seconds for quotes. Newly added cryptocurrencies usually appear in the list within 10 minutes.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our "new" cryptocurrency page [coinmarketcap.com/new/](https://coinmarketcap.com/new)
 //
@@ -42711,7 +43963,7 @@ func (c *ClientWithResponses) GetV1CryptocurrencyQuotesLatestWithResponse(ctx co
 //   - Professional
 //   - Enterprise
 //
-// **Cache / Update frequency:** Every 10 minutes.
+// **Cache / Update frequency:** Every 60 seconds for the list, and every 15 to 25 seconds for quotes.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our cryptocurrency Gainers & Losers page [coinmarketcap.com/gainers-losers/](https://coinmarketcap.com/gainers-losers/).
 //
@@ -42736,7 +43988,7 @@ func (c *ClientWithResponses) GetV1CryptocurrencyTrendingGainerslosersWithRespon
 //	- Professional
 //	- Enterprise
 //
-// **Cache / Update frequency:** Every 10 minutes.
+// **Cache / Update frequency:** Every 10 minutes for the list (every 12 hours for the 30d list), and every 15 to 25 seconds for quotes. The default first page (`start=1`, `limit=100`, USD) can be up to 10 minutes old.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** Our cryptocurrency Trending page [coinmarketcap.com/trending-cryptocurrencies/](https://coinmarketcap.com/trending-cryptocurrencies/).
 //
@@ -42761,7 +44013,7 @@ func (c *ClientWithResponses) GetV1CryptocurrencyTrendingLatestWithResponse(ctx 
 //	- Professional
 //	- Enterprise
 //
-// **Cache / Update frequency:** Every 24 hours.
+// **Cache / Update frequency:** Every 4 hours for the list, and every 15 to 25 seconds for quotes.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per `convert` option beyond the first.
 // **CMC equivalent pages:** The CoinMarketCap “Most Visited” trending list. [coinmarketcap.com/most-viewed-pages/](https://coinmarketcap.com/most-viewed-pages/).
 //
@@ -44112,11 +45364,13 @@ func (c *ClientWithResponses) GetV2CryptocurrencyMarketpairsLatestWithResponse(c
 	return ParseGetV2CryptocurrencyMarketpairsLatestResponse(rsp)
 }
 
-// GetV2CryptocurrencyOhlcvHistoricalWithResponse OHLCV Historical
+// GetV2CryptocurrencyOhlcvHistoricalWithResponse OHLCV Historical v2 (deprecated)
+//
+// **Deprecated.** Use [/v5/cryptocurrency/ohlcv/historical](/pro-api-reference/cryptocurrency#ohlcv-historical) instead. It returns the same candles as compact rows, one cryptocurrency per request, with calendar-week (`1w`) and calendar-month (`1M`) intervals and a simpler time window.
 //
 // Returns historical OHLCV (Open, High, Low, Close, Volume) data along with market cap for any cryptocurrency using time interval parameters. Currently daily and hourly OHLCV periods are supported. Volume is not currently supported for hourly OHLCV intervals before 2020-09-22.
 //
-// **Please note**: This documentation relates to our updated V2 endpoint, which may be incompatible with our V1 versions. Documentation for deprecated endpoints can be found [the deprecated section](/pro-api-reference/deprecated).
+// **Please note**: This documentation relates to our updated V2 endpoint, which may be incompatible with our earlier versions. Documentation for deprecated endpoints can be found [the deprecated section](/pro-api-reference/deprecated).
 //
 // **Technical Notes**
 // - Only the date portion of the timestamp is used for daily OHLCV so it's recommended to send an ISO date format like "2018-09-19" without time for this "time_period".
@@ -44186,7 +45440,7 @@ func (c *ClientWithResponses) GetV2CryptocurrencyOhlcvHistoricalWithResponse(ctx
 //	- Professional
 //	- Enterprise
 //
-//	**Cache / Update frequency:** Every 10 minutes. Additional OHLCV intervals and 1 minute updates will be available in the future.
+//	**Cache / Update frequency:** Every 15 to 25 seconds for `close`, and every 5 to 7 minutes for `open`, `high`, `low`, and `volume`. Additional OHLCV intervals and 1 minute updates will be available in the future.
 //	**Plan credit use:** 1 call credit per 250 OHLCV values returned (rounded up) and 1 call credit per `convert` option beyond the first.
 //	**CMC equivalent pages:** No equivalent, this data is only available via API.
 //
@@ -44357,7 +45611,7 @@ func (c *ClientWithResponses) GetV2DexMultiplierWithResponse(ctx context.Context
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v2/simple/price`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Every 60 seconds.
+// **Cache / Update frequency:** Every 15 to 25 seconds.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up), plus 1 credit per `convert` / `convert_id` option beyond the first. The `include_*` flags do not add credits.
 //
 // Returns a wrapper object for the known response body format(s).
@@ -44441,7 +45695,7 @@ func (c *ClientWithResponses) GetV2ToolsPriceconversionWithResponse(ctx context.
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v3/cryptocurrency/listings/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Every 60 seconds.
+// **Cache / Update frequency:** Every 15 seconds.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per \`convert\` option beyond the first.
 // **CMC equivalent pages:** Our latest cryptocurrency listing and ranking pages like [coinmarketcap.com/all/views/all/](https://coinmarketcap.com/all/views/all/), [coinmarketcap.com/tokens/](https://coinmarketcap.com/tokens/), [coinmarketcap.com/gainers-losers/](https://coinmarketcap.com/gainers-losers/), [coinmarketcap.com/new/](https://coinmarketcap.com/new/).
 //
@@ -44531,7 +45785,7 @@ func (c *ClientWithResponses) GetV3CryptocurrencyQuotesHistoricalWithResponse(ct
 //
 // <Callout type="tip" title="Available with no API key">Call this endpoint keyless - no API key, no signup. Prefix the path with `/public-api`: `https://pro-api.coinmarketcap.com/public-api/v3/cryptocurrency/quotes/latest`. See the [Keyless Public API](https://coinmarketcap.com/api/documentation/pro-api-reference/keyless-public-api) for the full list, rate limits, and examples.</Callout>
 //
-// **Cache / Update frequency:** Every 60 seconds.
+// **Cache / Update frequency:** Every 15 to 25 seconds.
 // **Plan credit use:** 1 call credit per 250 cryptocurrencies returned (rounded up) and 1 call credit per \`convert\` option beyond the first.
 // **CMC equivalent pages:** Latest market data pages for specific cryptocurrencies like [coinmarketcap.com/currencies/bitcoin/](https://coinmarketcap.com/currencies/bitcoin/).
 //
@@ -45007,6 +46261,73 @@ func (c *ClientWithResponses) GetV5CryptocurrencyDerivativesMarketPairsListLates
 	return ParseGetV5CryptocurrencyDerivativesMarketPairsListLatestResponse(rsp)
 }
 
+// GetV5CryptocurrencyOhlcvHistoricalWithResponse OHLCV Historical
+//
+// Returns historical OHLCV (open, high, low, close, volume) candles for one cryptocurrency, together with the market cap and the times of the high and the low in each candle. Each candle is a compact row of 10 values instead of a nested object, so long histories stay small and load straight into charting and analysis tools.
+//
+// Compared with the deprecated [/v2/cryptocurrency/ohlcv/historical](/pro-api-reference/deprecated#ohlcv-historical-v2-deprecated), this endpoint:
+//
+// - returns one cryptocurrency per request, by `id` or `slug`, in one currency set with `convert_id`.
+// - uses the interval names `15m`, `1h`, `4h`, `1d`, `1w` and `1M`. `1w` is a calendar week starting on Monday and `1M` is a calendar month.
+// - uses `time_start` and `count` when you send `time_start`, `time_end` and `count` together, instead of working out `count` from the time range.
+// - rejects parameters it does not support, such as `symbol`, `convert`, `time_period` and `skip_invalid`, with a `400` error instead of ignoring them.
+//
+// **Candle rows**
+//
+// `data` is an array of candles, oldest first. Each candle is an array of 10 values in this fixed order, so read the values by position:
+//
+// | Index | Field | Type | Description |
+// | --- | --- | --- | --- |
+// | 0 | `openPrice` | number | Open price: the first price in the period. |
+// | 1 | `highPrice` | number | High price: the highest price in the period. |
+// | 2 | `lowPrice` | number | Low price: the lowest price in the period. |
+// | 3 | `closePrice` | number | Close price: the last price in the period. |
+// | 4 | `volume` | number | Trading volume in the period. |
+// | 5 | `marketcap` | number | Market cap at the close of the period. |
+// | 6 | `openTime` | string | Start of the period (ISO 8601, UTC). |
+// | 7 | `highTime` | string | Time of the high price (ISO 8601, UTC). |
+// | 8 | `lowTime` | string | Time of the low price (ISO 8601, UTC). |
+// | 9 | `closeTime` | string | End of the period (ISO 8601, UTC), for example `2025-01-02T23:59:59.999Z`. |
+//
+// Prices, volume and market cap are in the currency set by `convert_id`. A value that is not available is returned as `null` in its position. Periods with no data, future periods and the period that is still open are left out, so a request with no data returns an empty `data` array.
+//
+// **Time window**
+//
+// `time_start` and `time_end` are inclusive, and both are rounded down to the start of their interval period in UTC. The window depends on which parameters you send:
+//
+// - `time_start` and `time_end`: every period in the range, up to 10000 periods.
+// - `time_start` and `count`: `count` periods starting at `time_start`.
+// - `time_end` and `count`: `count` periods ending with the period that contains `time_end`.
+// - `time_start`, `time_end` and `count`: `count` periods starting at `time_start`. `time_end` must still be a valid timestamp, but it does not change the window.
+// - Neither `time_start` nor `time_end`: the `count` most recent completed periods.
+//
+// `count` defaults to 10 when you do not send both `time_start` and `time_end`.
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- ~~Basic~~
+//	- ~~Builder~~
+//	- Startup (intraday: 1 month, daily: from 2010)
+//	- Growth (intraday: 3 months, daily: from 2010)
+//	- Professional (intraday: 12 months, daily: from 2010)
+//	- Enterprise (intraday: from 2010, daily: from 2010)
+//
+// **Note:** Intraday = `15m`, `1h` and `4h` intervals, Daily = `1d`, `1w` and `1M` intervals
+//
+// **Cache / Update frequency:** Each candle is returned once its period has closed.
+// **Plan credit use:** 1 call credit per 100 candles returned (rounded up). A request that returns no candles costs 0 credits.
+// **CMC equivalent pages:** Our historical cryptocurrency data pages like [coinmarketcap.com/currencies/bitcoin/historical-data/](https://coinmarketcap.com/currencies/bitcoin/historical-data/).
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v5/cryptocurrency/ohlcv/historical (the `GetV5CryptocurrencyOhlcvHistorical` operationId).
+func (c *ClientWithResponses) GetV5CryptocurrencyOhlcvHistoricalWithResponse(ctx context.Context, params *GetV5CryptocurrencyOhlcvHistoricalParams, reqEditors ...RequestEditorFn) (*GetV5CryptocurrencyOhlcvHistoricalResponse, error) {
+	rsp, err := c.GetV5CryptocurrencyOhlcvHistorical(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetV5CryptocurrencyOhlcvHistoricalResponse(rsp)
+}
+
 // GetV5DerivativesLiquidationsCryptocurrencyListLatestWithResponse Latest Liquidations by Cryptocurrency
 //
 // Returns a paginated, sorted list of cryptocurrencies, each with its perpetual and futures liquidation values over rolling 1-hour, 4-hour, and 24-hour windows, aggregated across every exchange that trades its derivatives. This is the per-coin leaderboard shown on the [CoinMarketCap liquidations chart](https://coinmarketcap.com/charts/liquidations/). When you call it without any filters, it returns every tracked cryptocurrency sorted by `total_liquidations_24h` in descending order.
@@ -45310,6 +46631,61 @@ func (c *ClientWithResponses) GetV5RealWorldAssetsMarketPairsListWithResponse(ct
 		return nil, err
 	}
 	return ParseGetV5RealWorldAssetsMarketPairsListResponse(rsp)
+}
+
+// GetV5RealWorldAssetsQuotesHistoricalWithResponse Quotes Historical
+//
+// Returns a time series of tokenized aggregate values for one or more Real-World Asset (RWA) assets: the average tokenized price, tokenized market cap and 24h tokenized volume, with one data point per interval period. For the current values, use [/v5/real-world-assets/quotes/latest](/pro-api-reference/real-world-assets#quotes-latest-5). For the history of one underlying token, call [/v3/cryptocurrency/quotes/historical](/pro-api-reference/cryptocurrency#quotes-historical) with the token's `crypto_id`.
+//
+// At least one of `rwa_id`, `rwa_slug`, or `symbol` is required, and only one identifier type may be used per request. Assets are returned in the order requested. Each asset's `quotes` array is flat: one entry per data point per convert currency, tagged with `convert_id` and `convert_symbol`, oldest first and grouped by currency in the order requested. An asset with `has_tokens: false` returns an empty `quotes` array.
+//
+// **Time window**
+//
+// `time_start` and `time_end` are inclusive, and both are rounded down to the start of their interval period. The window depends on which parameters you send:
+//
+// - Neither `time_start` nor `time_end`: the `count` most recent periods.
+// - `time_end` only: `count` periods ending with the period that contains `time_end`.
+// - `time_start` only: `count` periods starting at `time_start`.
+// - `time_start` and `time_end`: every period in the range. If you also send `count`, the first `count` periods from `time_start`.
+//
+// `count` defaults to 10 unless you send both `time_start` and `time_end`. It counts interval periods, not data points: a period with no data is skipped, so fewer data points can come back.
+//
+// **Data points**
+//
+// Each data point is the first value recorded in its period, stamped at the start of the period. Daily and longer periods start at 00:00 UTC for commodities, and at midnight New York time (04:00 or 05:00 UTC) for stocks and ETFs. `weekly` periods start on Monday and `monthly` periods on the 1st.
+//
+// **Limits**
+//
+// - History starts no earlier than January 1, 2020. A range that starts earlier returns data from the first available data point, with no notice.
+// - One request returns at most 10,000 data points, counted as the number of assets times the number of periods in the range. A larger request returns `400`.
+// - `hourly` and `1h` to `12h` reach back at most 100 days, and `5m` to `45m` at most 10 days. Lower plans reach back less, as listed below. A request beyond your plan's window returns `403` with error code `1014`.
+// - Up to 3 `convert` or `convert_id` values per request.
+//
+// How far back you can go depends on your plan and the interval.
+//
+//	**This endpoint is available on the following [API plans](https://coinmarketcap.com/api/pricing/):**
+//	- Basic (hourly: 1 month, daily: 1 year)
+//	- Builder (hourly: 1 month, daily: 3 years)
+//	- Startup (hourly: 1 month, daily: from 2020)
+//	- Growth (hourly: 3 months, daily: from 2020)
+//	- Professional (hourly: 100 days, daily: from 2020)
+//	- Enterprise (hourly: 100 days, daily: from 2020, `5m` to `45m`: 10 days)
+//
+// **Note:** Hourly = `hourly` and `1h` to `12h` intervals, Daily = `daily`, `weekly`, `monthly`, `yearly` and `1d` to `365d` intervals. The `5m` to `45m` intervals are available on Enterprise only.
+//
+// **Cache / Update frequency:** Every 5 minutes.
+// **Plan credit use:** 1 call credit per 100 data points returned (rounded up), counted across all requested assets, plus 1 credit per `convert`/`convert_id` beyond the first. A request that returns no data points costs 0 credits.
+// **CMC equivalent pages:** The price chart on RWA asset pages like [coinmarketcap.com/real-world-assets/nvidia/](https://coinmarketcap.com/real-world-assets/nvidia/).
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v5/real-world-assets/quotes/historical (the `GetV5RealWorldAssetsQuotesHistorical` operationId).
+func (c *ClientWithResponses) GetV5RealWorldAssetsQuotesHistoricalWithResponse(ctx context.Context, params *GetV5RealWorldAssetsQuotesHistoricalParams, reqEditors ...RequestEditorFn) (*GetV5RealWorldAssetsQuotesHistoricalResponse, error) {
+	rsp, err := c.GetV5RealWorldAssetsQuotesHistorical(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetV5RealWorldAssetsQuotesHistoricalResponse(rsp)
 }
 
 // GetV5RealWorldAssetsQuotesLatestWithResponse Quotes Latest
@@ -50161,6 +51537,67 @@ func ParseGetV5CryptocurrencyDerivativesMarketPairsListLatestResponse(rsp *http.
 	return response, nil
 }
 
+// ParseGetV5CryptocurrencyOhlcvHistoricalResponse parses an HTTP response from a GetV5CryptocurrencyOhlcvHistoricalWithResponse call
+func ParseGetV5CryptocurrencyOhlcvHistoricalResponse(rsp *http.Response) (*GetV5CryptocurrencyOhlcvHistoricalResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetV5CryptocurrencyOhlcvHistoricalResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CryptocurrencyOHLCVHistoricalV5ResponseModel
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest HTTPStatus400ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest HTTPStatus401ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest HTTPStatus403ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest HTTPStatus429ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest HTTPStatus500ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetV5DerivativesLiquidationsCryptocurrencyListLatestResponse parses an HTTP response from a GetV5DerivativesLiquidationsCryptocurrencyListLatestWithResponse call
 func ParseGetV5DerivativesLiquidationsCryptocurrencyListLatestResponse(rsp *http.Response) (*GetV5DerivativesLiquidationsCryptocurrencyListLatestResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -50787,6 +52224,67 @@ func ParseGetV5RealWorldAssetsMarketPairsListResponse(rsp *http.Response) (*GetV
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest RWAMarketPairsResponseModel
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest HTTPStatus400ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest HTTPStatus401ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest HTTPStatus403ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest HTTPStatus429ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest HTTPStatus500ErrorObject
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetV5RealWorldAssetsQuotesHistoricalResponse parses an HTTP response from a GetV5RealWorldAssetsQuotesHistoricalWithResponse call
+func ParseGetV5RealWorldAssetsQuotesHistoricalResponse(rsp *http.Response) (*GetV5RealWorldAssetsQuotesHistoricalResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetV5RealWorldAssetsQuotesHistoricalResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest RWAQuotesHistoricalResponseModel
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}

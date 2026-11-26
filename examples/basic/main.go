@@ -12,7 +12,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/OpenCMC/coinmarketcap-api-go/v5"
+	"github.com/OpenCMC/coinmarketcap-api-go/v6"
 )
 
 func main() {

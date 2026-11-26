@@ -1,19 +1,19 @@
 # coinmarketcap-api-go
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/OpenCMC/coinmarketcap-api-go/v5.svg)](https://pkg.go.dev/github.com/OpenCMC/coinmarketcap-api-go/v5)
+[![Go Reference](https://pkg.go.dev/badge/github.com/OpenCMC/coinmarketcap-api-go/v6.svg)](https://pkg.go.dev/github.com/OpenCMC/coinmarketcap-api-go/v6)
 
 The official Go SDK for the [CoinMarketCap Pro API](https://coinmarketcap.com/api/documentation/).
 
 ## Installation
 
 ```bash
-go get github.com/OpenCMC/coinmarketcap-api-go/v5
+go get github.com/OpenCMC/coinmarketcap-api-go/v6
 ```
 
 The package name is `coinmarketcap`:
 
 ```go
-import "github.com/OpenCMC/coinmarketcap-api-go/v5"
+import "github.com/OpenCMC/coinmarketcap-api-go/v6"
 ```
 
 ## Quick Start
@@ -29,7 +29,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/OpenCMC/coinmarketcap-api-go/v5"
+	"github.com/OpenCMC/coinmarketcap-api-go/v6"
 )
 
 func main() {
@@ -231,7 +231,7 @@ existing code. A minor version adds endpoints or fields. A patch version fixes b
 
 The Go, TypeScript (`@coinmarketcap/sdk`) and Python (`coinmarketcap-sdk`) SDKs are
 released together with the same version number, so the module path ends in the major
-version (`/v5`). The SDK version is separate from the API's endpoint versions (`/v1`,
+version (`/v6`). The SDK version is separate from the API's endpoint versions (`/v1`,
 `/v2`, `/v3`). Each [CHANGELOG](CHANGELOG.md) entry names the OpenAPI spec the release
 was built from and lists its breaking changes.
 

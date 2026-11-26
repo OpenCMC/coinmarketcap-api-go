@@ -221,9 +221,9 @@ func (s *CryptocurrencyService) OhlcvLatest(ctx context.Context, params *Cryptoc
 	return decode[CryptocurrencyOHLCVLatestResponseModel](s.client.raw.GetV2CryptocurrencyOhlcvLatest(ctx, params, reqEditors...))
 }
 
-// OhlcvHistorical calls GET /v2/cryptocurrency/ohlcv/historical (OHLCV Historical).
-func (s *CryptocurrencyService) OhlcvHistorical(ctx context.Context, params *CryptocurrencyOhlcvHistoricalParams, reqEditors ...RequestEditorFn) (*CryptocurrencyOHLCVHistoricalResponseModel, error) {
-	return decode[CryptocurrencyOHLCVHistoricalResponseModel](s.client.raw.GetV2CryptocurrencyOhlcvHistorical(ctx, params, reqEditors...))
+// OhlcvHistorical calls GET /v5/cryptocurrency/ohlcv/historical (OHLCV Historical).
+func (s *CryptocurrencyService) OhlcvHistorical(ctx context.Context, params *CryptocurrencyOhlcvHistoricalParams, reqEditors ...RequestEditorFn) (*CryptocurrencyOHLCVHistoricalV5ResponseModel, error) {
+	return decode[CryptocurrencyOHLCVHistoricalV5ResponseModel](s.client.raw.GetV5CryptocurrencyOhlcvHistorical(ctx, params, reqEditors...))
 }
 
 // MarketpairsLatest calls GET /v2/cryptocurrency/market-pairs/latest (Market Pairs Latest).
@@ -345,6 +345,13 @@ func (s *DeprecatedService) CryptocurrencyMarketpairsLatest(ctx context.Context,
 // Deprecated: the API has a newer version of this endpoint.
 func (s *DeprecatedService) CryptocurrencyOhlcvHistorical(ctx context.Context, params *DeprecatedCryptocurrencyOhlcvHistoricalParams, reqEditors ...RequestEditorFn) (*CryptocurrencyOHLCVHistoricalResponseModel, error) {
 	return decode[CryptocurrencyOHLCVHistoricalResponseModel](s.client.raw.GetV1CryptocurrencyOhlcvHistorical(ctx, params, reqEditors...))
+}
+
+// GetV2CryptocurrencyOhlcvHistorical calls GET /v2/cryptocurrency/ohlcv/historical (OHLCV Historical v2 (deprecated)).
+//
+// Deprecated: the API has a newer version of this endpoint.
+func (s *DeprecatedService) GetV2CryptocurrencyOhlcvHistorical(ctx context.Context, params *DeprecatedGetV2CryptocurrencyOhlcvHistoricalParams, reqEditors ...RequestEditorFn) (*CryptocurrencyOHLCVHistoricalResponseModel, error) {
+	return decode[CryptocurrencyOHLCVHistoricalResponseModel](s.client.raw.GetV2CryptocurrencyOhlcvHistorical(ctx, params, reqEditors...))
 }
 
 // CryptocurrencyOhlcvLatest calls GET /v1/cryptocurrency/ohlcv/latest (OHLCV Latest v1 (deprecated)).
@@ -691,6 +698,11 @@ func (s *RealWorldAssetsService) QuotesLatest(ctx context.Context, params *RealW
 	return decode[RWAQuotesLatestResponseModel](s.client.raw.GetV5RealWorldAssetsQuotesLatest(ctx, params, reqEditors...))
 }
 
+// QuotesHistorical calls GET /v5/real-world-assets/quotes/historical (Quotes Historical).
+func (s *RealWorldAssetsService) QuotesHistorical(ctx context.Context, params *RealWorldAssetsQuotesHistoricalParams, reqEditors ...RequestEditorFn) (*RWAQuotesHistoricalResponseModel, error) {
+	return decode[RWAQuotesHistoricalResponseModel](s.client.raw.GetV5RealWorldAssetsQuotesHistorical(ctx, params, reqEditors...))
+}
+
 // IssuersList calls GET /v5/real-world-assets/issuers/list (Issuers List).
 func (s *RealWorldAssetsService) IssuersList(ctx context.Context, params *RealWorldAssetsIssuersListParams, reqEditors ...RequestEditorFn) (*RWAIssuersListResponseModel, error) {
 	return decode[RWAIssuersListResponseModel](s.client.raw.GetV5RealWorldAssetsIssuersList(ctx, params, reqEditors...))
@@ -865,7 +877,7 @@ type (
 	CryptocurrencyQuotesLatestParams                                = GetV3CryptocurrencyQuotesLatestParams
 	CryptocurrencyQuotesHistoricalParams                            = GetV3CryptocurrencyQuotesHistoricalParams
 	CryptocurrencyOhlcvLatestParams                                 = GetV2CryptocurrencyOhlcvLatestParams
-	CryptocurrencyOhlcvHistoricalParams                             = GetV2CryptocurrencyOhlcvHistoricalParams
+	CryptocurrencyOhlcvHistoricalParams                             = GetV5CryptocurrencyOhlcvHistoricalParams
 	CryptocurrencyMarketpairsLatestParams                           = GetV2CryptocurrencyMarketpairsLatestParams
 	CryptocurrencyPriceperformancestatsLatestParams                 = GetV2CryptocurrencyPriceperformancestatsLatestParams
 	CryptocurrencyInfoParams                                        = GetV2CryptocurrencyInfoParams
@@ -884,6 +896,7 @@ type (
 	DeprecatedCryptocurrencyListingsLatestParams                    = GetV1CryptocurrencyListingsLatestParams
 	DeprecatedCryptocurrencyMarketpairsLatestParams                 = GetV1CryptocurrencyMarketpairsLatestParams
 	DeprecatedCryptocurrencyOhlcvHistoricalParams                   = GetV1CryptocurrencyOhlcvHistoricalParams
+	DeprecatedGetV2CryptocurrencyOhlcvHistoricalParams              = GetV2CryptocurrencyOhlcvHistoricalParams
 	DeprecatedCryptocurrencyOhlcvLatestParams                       = GetV1CryptocurrencyOhlcvLatestParams
 	DeprecatedCryptocurrencyPriceperformancestatsLatestParams       = GetV1CryptocurrencyPriceperformancestatsLatestParams
 	DeprecatedCryptocurrencyQuotesHistoricalParams                  = GetV1CryptocurrencyQuotesHistoricalParams
@@ -929,6 +942,7 @@ type (
 	RealWorldAssetsAssetsListParams                                 = GetV5RealWorldAssetsAssetsListParams
 	RealWorldAssetsMarketPairsListParams                            = GetV5RealWorldAssetsMarketPairsListParams
 	RealWorldAssetsQuotesLatestParams                               = GetV5RealWorldAssetsQuotesLatestParams
+	RealWorldAssetsQuotesHistoricalParams                           = GetV5RealWorldAssetsQuotesHistoricalParams
 	RealWorldAssetsIssuersListParams                                = GetV5RealWorldAssetsIssuersListParams
 	RealWorldAssetsIssuersParams                                    = GetV5RealWorldAssetsIssuersParams
 	TokenTrendingListBody                                           = GetTrendingListJSONRequestBody
@@ -974,7 +988,7 @@ var operationIndex = []operationInfo{
 	{"Cryptocurrency", "QuotesLatest", "GET", "/v3/cryptocurrency/quotes/latest", "getV3CryptocurrencyQuotesLatest", true},
 	{"Cryptocurrency", "QuotesHistorical", "GET", "/v3/cryptocurrency/quotes/historical", "getV3CryptocurrencyQuotesHistorical", false},
 	{"Cryptocurrency", "OhlcvLatest", "GET", "/v2/cryptocurrency/ohlcv/latest", "getV2CryptocurrencyOhlcvLatest", false},
-	{"Cryptocurrency", "OhlcvHistorical", "GET", "/v2/cryptocurrency/ohlcv/historical", "getV2CryptocurrencyOhlcvHistorical", false},
+	{"Cryptocurrency", "OhlcvHistorical", "GET", "/v5/cryptocurrency/ohlcv/historical", "getV5CryptocurrencyOhlcvHistorical", false},
 	{"Cryptocurrency", "MarketpairsLatest", "GET", "/v2/cryptocurrency/market-pairs/latest", "getV2CryptocurrencyMarketpairsLatest", false},
 	{"Cryptocurrency", "PriceperformancestatsLatest", "GET", "/v2/cryptocurrency/price-performance-stats/latest", "getV2CryptocurrencyPriceperformancestatsLatest", false},
 	{"Cryptocurrency", "Info", "GET", "/v2/cryptocurrency/info", "getV2CryptocurrencyInfo", true},
@@ -993,6 +1007,7 @@ var operationIndex = []operationInfo{
 	{"Deprecated", "CryptocurrencyListingsLatest", "GET", "/v1/cryptocurrency/listings/latest", "getV1CryptocurrencyListingsLatest", false},
 	{"Deprecated", "CryptocurrencyMarketpairsLatest", "GET", "/v1/cryptocurrency/market-pairs/latest", "getV1CryptocurrencyMarketpairsLatest", false},
 	{"Deprecated", "CryptocurrencyOhlcvHistorical", "GET", "/v1/cryptocurrency/ohlcv/historical", "getV1CryptocurrencyOhlcvHistorical", false},
+	{"Deprecated", "GetV2CryptocurrencyOhlcvHistorical", "GET", "/v2/cryptocurrency/ohlcv/historical", "getV2CryptocurrencyOhlcvHistorical", false},
 	{"Deprecated", "CryptocurrencyOhlcvLatest", "GET", "/v1/cryptocurrency/ohlcv/latest", "getV1CryptocurrencyOhlcvLatest", false},
 	{"Deprecated", "CryptocurrencyPriceperformancestatsLatest", "GET", "/v1/cryptocurrency/price-performance-stats/latest", "getV1CryptocurrencyPriceperformancestatsLatest", false},
 	{"Deprecated", "CryptocurrencyQuotesHistorical", "GET", "/v1/cryptocurrency/quotes/historical", "getV1CryptocurrencyQuotesHistorical", false},
@@ -1041,6 +1056,7 @@ var operationIndex = []operationInfo{
 	{"RealWorldAssets", "AssetsList", "GET", "/v5/real-world-assets/assets/list", "getV5RealWorldAssetsAssetsList", false},
 	{"RealWorldAssets", "MarketPairsList", "GET", "/v5/real-world-assets/market-pairs/list", "getV5RealWorldAssetsMarketPairsList", false},
 	{"RealWorldAssets", "QuotesLatest", "GET", "/v5/real-world-assets/quotes/latest", "getV5RealWorldAssetsQuotesLatest", false},
+	{"RealWorldAssets", "QuotesHistorical", "GET", "/v5/real-world-assets/quotes/historical", "getV5RealWorldAssetsQuotesHistorical", false},
 	{"RealWorldAssets", "IssuersList", "GET", "/v5/real-world-assets/issuers/list", "getV5RealWorldAssetsIssuersList", false},
 	{"RealWorldAssets", "Issuers", "GET", "/v5/real-world-assets/issuers", "getV5RealWorldAssetsIssuers", false},
 	{"Token", "TrendingList", "POST", "/v1/dex/tokens/trending/list", "getTrendingList", false},

@@ -2,7 +2,7 @@
 
 package coinmarketcap
 
-import "github.com/OpenCMC/coinmarketcap-api-go/v5/internal/generated"
+import "github.com/OpenCMC/coinmarketcap-api-go/v6/internal/generated"
 
 // RawClient is the generated low-level client. Client.Raw returns one that
 // shares the SDK's authentication, retries and timeout.
@@ -135,8 +135,12 @@ type (
 	CryptocurrencyOHLCVHistoricalQuoteObject                                                                                                         = generated.CryptocurrencyOHLCVHistoricalQuoteObject
 	CryptocurrencyOHLCVHistoricalResponseModel                                                                                                       = generated.CryptocurrencyOHLCVHistoricalResponseModel
 	CryptocurrencyOHLCVHistoricalResponseModelData0                                                                                                  = generated.CryptocurrencyOHLCVHistoricalResponseModelData0
+	CryptocurrencyOHLCVHistoricalResponseModelData01                                                                                                 = generated.CryptocurrencyOHLCVHistoricalResponseModelData01
 	CryptocurrencyOHLCVHistoricalResponseModel_Data                                                                                                  = generated.CryptocurrencyOHLCVHistoricalResponseModel_Data
+	CryptocurrencyOHLCVHistoricalResponseModel_Data_0                                                                                                = generated.CryptocurrencyOHLCVHistoricalResponseModel_Data_0
 	CryptocurrencyOHLCVHistoricalResultsObject                                                                                                       = generated.CryptocurrencyOHLCVHistoricalResultsObject
+	CryptocurrencyOHLCVHistoricalV5Candle                                                                                                            = generated.CryptocurrencyOHLCVHistoricalV5Candle
+	CryptocurrencyOHLCVHistoricalV5ResponseModel                                                                                                     = generated.CryptocurrencyOHLCVHistoricalV5ResponseModel
 	CryptocurrencyOHLCVLatestCryptocurrencyObject                                                                                                    = generated.CryptocurrencyOHLCVLatestCryptocurrencyObject
 	CryptocurrencyOHLCVLatestCryptocurrencyResultsMap                                                                                                = generated.CryptocurrencyOHLCVLatestCryptocurrencyResultsMap
 	CryptocurrencyOHLCVLatestQuoteMap                                                                                                                = generated.CryptocurrencyOHLCVLatestQuoteMap
@@ -159,6 +163,8 @@ type (
 	CryptocurrencyQuotesHistoricalResponseModel_Data                                                                                                 = generated.CryptocurrencyQuotesHistoricalResponseModel_Data
 	CryptocurrencyQuotesHistoricalResultObject                                                                                                       = generated.CryptocurrencyQuotesHistoricalResultObject
 	CryptocurrencyQuotesHistoricalResultsMap                                                                                                         = generated.CryptocurrencyQuotesHistoricalResultsMap
+	CryptocurrencyQuotesHistoricalResultsMap1                                                                                                        = generated.CryptocurrencyQuotesHistoricalResultsMap1
+	CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties                                                                                    = generated.CryptocurrencyQuotesHistoricalResultsMap_AdditionalProperties
 	CryptocurrencyQuotesLatestCryptocurrencyObject                                                                                                   = generated.CryptocurrencyQuotesLatestCryptocurrencyObject
 	CryptocurrencyQuotesLatestCryptocurrencyObjectTags0                                                                                              = generated.CryptocurrencyQuotesLatestCryptocurrencyObjectTags0
 	CryptocurrencyQuotesLatestCryptocurrencyObjectTags1                                                                                              = generated.CryptocurrencyQuotesLatestCryptocurrencyObjectTags1
@@ -526,6 +532,9 @@ type (
 	GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSort                                                                                    = generated.GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSort
 	GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSortDir                                                                                 = generated.GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSortDir
 	GetV5CryptocurrencyDerivativesMarketPairsListLatestResponse                                                                                      = generated.GetV5CryptocurrencyDerivativesMarketPairsListLatestResponse
+	GetV5CryptocurrencyOhlcvHistoricalParams                                                                                                         = generated.GetV5CryptocurrencyOhlcvHistoricalParams
+	GetV5CryptocurrencyOhlcvHistoricalParamsInterval                                                                                                 = generated.GetV5CryptocurrencyOhlcvHistoricalParamsInterval
+	GetV5CryptocurrencyOhlcvHistoricalResponse                                                                                                       = generated.GetV5CryptocurrencyOhlcvHistoricalResponse
 	GetV5DerivativesLiquidationsCryptocurrencyListLatestParams                                                                                       = generated.GetV5DerivativesLiquidationsCryptocurrencyListLatestParams
 	GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSort                                                                                   = generated.GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSort
 	GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSortDir                                                                                = generated.GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSortDir
@@ -565,6 +574,9 @@ type (
 	GetV5RealWorldAssetsMarketPairsListParamsSort                                                                                                    = generated.GetV5RealWorldAssetsMarketPairsListParamsSort
 	GetV5RealWorldAssetsMarketPairsListParamsSortDir                                                                                                 = generated.GetV5RealWorldAssetsMarketPairsListParamsSortDir
 	GetV5RealWorldAssetsMarketPairsListResponse                                                                                                      = generated.GetV5RealWorldAssetsMarketPairsListResponse
+	GetV5RealWorldAssetsQuotesHistoricalParams                                                                                                       = generated.GetV5RealWorldAssetsQuotesHistoricalParams
+	GetV5RealWorldAssetsQuotesHistoricalParamsInterval                                                                                               = generated.GetV5RealWorldAssetsQuotesHistoricalParamsInterval
+	GetV5RealWorldAssetsQuotesHistoricalResponse                                                                                                     = generated.GetV5RealWorldAssetsQuotesHistoricalResponse
 	GetV5RealWorldAssetsQuotesLatestParams                                                                                                           = generated.GetV5RealWorldAssetsQuotesLatestParams
 	GetV5RealWorldAssetsQuotesLatestResponse                                                                                                         = generated.GetV5RealWorldAssetsQuotesLatestResponse
 	GlobalMetricsQuotesHistoricCurrencyQuoteObject                                                                                                   = generated.GlobalMetricsQuotesHistoricCurrencyQuoteObject
@@ -654,13 +666,18 @@ type (
 	RWAMarketPairsResultsObjectMarketPairsCategory                                                                                                   = generated.RWAMarketPairsResultsObjectMarketPairsCategory
 	RWAMarketPairsResultsObjectMarketPairsFeeType                                                                                                    = generated.RWAMarketPairsResultsObjectMarketPairsFeeType
 	RWAMarketPairsResultsObjectMarketPairsMarketPairBaseCurrencyType                                                                                 = generated.RWAMarketPairsResultsObjectMarketPairsMarketPairBaseCurrencyType
-	RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType                                                                               = generated.RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyType
+	RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType                                                                                = generated.RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyType
 	RWAMarketPairsResultsObject_MarketPairs                                                                                                          = generated.RWAMarketPairsResultsObject_MarketPairs
 	RWAMarketPairsResultsObject_MarketPairs_Exchange                                                                                                 = generated.RWAMarketPairsResultsObject_MarketPairs_Exchange
 	RWAMarketPairsResultsObject_MarketPairs_ExchangeReportedQuotes                                                                                   = generated.RWAMarketPairsResultsObject_MarketPairs_ExchangeReportedQuotes
 	RWAMarketPairsResultsObject_MarketPairs_MarketPairBase                                                                                           = generated.RWAMarketPairsResultsObject_MarketPairs_MarketPairBase
-	RWAMarketPairsResultsObject_MarketPairs_MarketPairQuotes                                                                                         = generated.RWAMarketPairsResultsObject_MarketPairs_MarketPairQuotes
+	RWAMarketPairsResultsObject_MarketPairs_MarketPairQuote                                                                                          = generated.RWAMarketPairsResultsObject_MarketPairs_MarketPairQuote
 	RWAMarketPairsResultsObject_MarketPairs_Quotes                                                                                                   = generated.RWAMarketPairsResultsObject_MarketPairs_Quotes
+	RWAQuotesHistoricalResponseModel                                                                                                                 = generated.RWAQuotesHistoricalResponseModel
+	RWAQuotesHistoricalResultsObject                                                                                                                 = generated.RWAQuotesHistoricalResultsObject
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetType                                                                                               = generated.RWAQuotesHistoricalResultsObjectRwaAssetsAssetType
+	RWAQuotesHistoricalResultsObject_RwaAssets                                                                                                       = generated.RWAQuotesHistoricalResultsObject_RwaAssets
+	RWAQuotesHistoricalResultsObject_RwaAssets_Quotes                                                                                                = generated.RWAQuotesHistoricalResultsObject_RwaAssets_Quotes
 	RWAQuotesLatestResponseModel                                                                                                                     = generated.RWAQuotesLatestResponseModel
 	RWAQuotesLatestResultsObject                                                                                                                     = generated.RWAQuotesLatestResultsObject
 	RWAQuotesLatestResultsObjectRwaAssetsAssetType                                                                                                   = generated.RWAQuotesLatestResultsObjectRwaAssetsAssetType
@@ -1180,6 +1197,12 @@ const (
 	GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSortDirDesc                                                            = generated.GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSortDirDesc
 	GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSortEffectiveLiquidity                                                 = generated.GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSortEffectiveLiquidity
 	GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSortVolume24HStrict                                                    = generated.GetV5CryptocurrencyDerivativesMarketPairsListLatestParamsSortVolume24HStrict
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN15M                                                                            = generated.GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN15M
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1D                                                                             = generated.GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1D
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1H                                                                             = generated.GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1H
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1M                                                                             = generated.GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1M
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1W                                                                             = generated.GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN1W
+	GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN4H                                                                             = generated.GetV5CryptocurrencyOhlcvHistoricalParamsIntervalN4H
 	GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSortDirAsc                                                            = generated.GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSortDirAsc
 	GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSortDirDesc                                                           = generated.GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSortDirDesc
 	GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSortTotalLiquidations1H                                               = generated.GetV5DerivativesLiquidationsCryptocurrencyListLatestParamsSortTotalLiquidations1H
@@ -1236,6 +1259,32 @@ const (
 	GetV5RealWorldAssetsMarketPairsListParamsSortDirDesc                                                                            = generated.GetV5RealWorldAssetsMarketPairsListParamsSortDirDesc
 	GetV5RealWorldAssetsMarketPairsListParamsSortPrice                                                                              = generated.GetV5RealWorldAssetsMarketPairsListParamsSortPrice
 	GetV5RealWorldAssetsMarketPairsListParamsSortVolume24H                                                                          = generated.GetV5RealWorldAssetsMarketPairsListParamsSortVolume24H
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalDaily                                                                         = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalDaily
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalHourly                                                                        = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalHourly
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalMonthly                                                                       = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalMonthly
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN10M                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN10M
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN12H                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN12H
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN14D                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN14D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN15D                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN15D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN15M                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN15M
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN1D                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN1D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN1H                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN1H
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN2D                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN2D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN2H                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN2H
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN30D                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN30D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN30M                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN30M
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN365D                                                                         = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN365D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN3D                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN3D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN3H                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN3H
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN45M                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN45M
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN4H                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN4H
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN5M                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN5M
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN60D                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN60D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN6H                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN6H
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN7D                                                                           = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN7D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN90D                                                                          = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalN90D
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalWeekly                                                                        = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalWeekly
+	GetV5RealWorldAssetsQuotesHistoricalParamsIntervalYearly                                                                        = generated.GetV5RealWorldAssetsQuotesHistoricalParamsIntervalYearly
 	N500                                                                                                                            = generated.N500
 	ONGOING                                                                                                                         = generated.ONGOING
 	RWAAssetListResultsObjectRwaAssetsAssetTypeCommodity                                                                            = generated.RWAAssetListResultsObjectRwaAssetsAssetTypeCommodity
@@ -1266,8 +1315,14 @@ const (
 	RWAMarketPairsResultsObjectMarketPairsFeeTypeUnknown                                                                            = generated.RWAMarketPairsResultsObjectMarketPairsFeeTypeUnknown
 	RWAMarketPairsResultsObjectMarketPairsMarketPairBaseCurrencyTypeCryptocurrency                                                  = generated.RWAMarketPairsResultsObjectMarketPairsMarketPairBaseCurrencyTypeCryptocurrency
 	RWAMarketPairsResultsObjectMarketPairsMarketPairBaseCurrencyTypeFiat                                                            = generated.RWAMarketPairsResultsObjectMarketPairsMarketPairBaseCurrencyTypeFiat
-	RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyTypeCryptocurrency                                                = generated.RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyTypeCryptocurrency
-	RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyTypeFiat                                                          = generated.RWAMarketPairsResultsObjectMarketPairsMarketPairQuotesCurrencyTypeFiat
+	RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyTypeCryptocurrency                                                 = generated.RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyTypeCryptocurrency
+	RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyTypeFiat                                                           = generated.RWAMarketPairsResultsObjectMarketPairsMarketPairQuoteCurrencyTypeFiat
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeCommodity                                                                     = generated.RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeCommodity
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeCurrency                                                                      = generated.RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeCurrency
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeEtf                                                                           = generated.RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeEtf
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeGovernmentSecurity                                                            = generated.RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeGovernmentSecurity
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeRealEstate                                                                    = generated.RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeRealEstate
+	RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeStock                                                                         = generated.RWAQuotesHistoricalResultsObjectRwaAssetsAssetTypeStock
 	RWAQuotesLatestResultsObjectRwaAssetsAssetTypeCommodity                                                                         = generated.RWAQuotesLatestResultsObjectRwaAssetsAssetTypeCommodity
 	RWAQuotesLatestResultsObjectRwaAssetsAssetTypeCurrency                                                                          = generated.RWAQuotesLatestResultsObjectRwaAssetsAssetTypeCurrency
 	RWAQuotesLatestResultsObjectRwaAssetsAssetTypeEtf                                                                               = generated.RWAQuotesLatestResultsObjectRwaAssetsAssetTypeEtf

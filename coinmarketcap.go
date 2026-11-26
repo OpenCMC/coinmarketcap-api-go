@@ -27,7 +27,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/OpenCMC/coinmarketcap-api-go/v5/internal/generated"
+	"github.com/OpenCMC/coinmarketcap-api-go/v6/internal/generated"
 )
 
 // Environment selects which API the client calls.
